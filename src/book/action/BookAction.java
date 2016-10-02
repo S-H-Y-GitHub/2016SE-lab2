@@ -8,7 +8,7 @@ import book.model.Book;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class BookAction extends ActionSupport {
-    private static final long serialVersionUID = 872316812305356L;
+/*    private static final long serialVersionUID = 872316812305356L;
 
     private String isbn;
     private String[] isbns;
@@ -70,5 +70,5 @@ public class BookAction extends ActionSupport {
             dao.removeBooks(isbns);
         }
         return SUCCESS;
-    }
+    }*/
 }
