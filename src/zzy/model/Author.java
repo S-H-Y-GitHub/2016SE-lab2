@@ -1,5 +1,7 @@
 package zzy.model;
 
+import java.util.*;
+
 public class Author {
 
     private int AuthorID;
