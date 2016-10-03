@@ -6,11 +6,11 @@ import java.util.*;
 public class Book {
 
     private int ISBN;
-    private String Title = "";
+    private String Title;
     private int AuthorID;
-    private String Publisher = "";
-    private Date PublishDate = new Date(0);
-    private float Price = 0;
+    private String Publisher;
+    private Date PublishDate;
+    private float Price;
 
     public void setISBN(int ISBN) {
         this.ISBN = ISBN;

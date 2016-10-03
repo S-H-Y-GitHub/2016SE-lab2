@@ -8,7 +8,7 @@
     <include file="struts-default.xml"/>
     <package name="Book_Management" extends="struts-default">
         <action name="List" class="zzy.Action" method="list">
-            <result>index.jsp</result>
+            <result>list.jsp</result>
         </action>
         <action name="Edit" class="zzy.Action" method="load">
             <result>Edit.jsp</result>

@@ -1,38 +1,22 @@
 package zzy;
 
+import zzy.model.*;
+import zzy.dao.*;
+import java.util.*;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class Action extends ActionSupport {
-/*    private static final long serialVersionUID = 872316812305356L;
 
-    private String isbn;
-    private String[] isbns;
     private Book book;
-    private Collection<Book> books;
-    private BookDao dao =  BookDao.getInstance();
+    private ArrayList <Book> books;
+    private BookDao dao = new BookDao();
 
     public Book getBook() {
-        return zzy;
+        return book;
     }
 
-    public void setBook(Book zzy) {
-        this.zzy = zzy;
-    }
-
-    public String getIsbn() {
-        return isbn;
-    }
-
-    public void setIsbn(String isbn) {
-        this.isbn = isbn;
-    }
-
-    public String[] getIsbns() {
-        return isbns;
-    }
-
-    public void setIsbns(String[] isbns) {
-        this.isbns = isbns;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
     public Collection<Book> getBooks() {
@@ -65,5 +49,5 @@ public class Action extends ActionSupport {
             dao.removeBooks(isbns);
         }
         return SUCCESS;
-    }*/
+    }
 }
