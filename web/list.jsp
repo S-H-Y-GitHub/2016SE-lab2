@@ -39,16 +39,16 @@
     <tbody>
     <s:iterator value="books">
       <tr>
-        <td><input type="checkbox" name="isbns" value='<s:property value="isbn" />' /></td>
-        <td><s:property value="isbn" /></td>
+        <td><input type="checkbox" name="isbns" value='<s:property value="ISBN" />' /></td>
+        <td><s:property value="ISBN" /></td>
         <td><s:property value="title" /></td>
         <td>$<s:property value="price" /></td>
         <td>
-          <a href='<s:url action="Edit"><s:param name="isbn" value="isbn" /></s:url>'>
+          <a href='#'>
             Edit
           </a>
           &nbsp;
-          <a href='<s:url action="Remove"><s:param name="isbn" value="isbn" /></s:url>'>
+          <a href='<s:url action="Remove"><s:param name="isbn" value="ISBN" /></s:url>'>
             Delete
           </a>
         </td>
