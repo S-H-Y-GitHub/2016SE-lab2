@@ -19,5 +19,8 @@
         <action name="Remove" class="zzy.Action" method="remove">
             <result type="redirect">List.action</result>
         </action>
+        <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
+            <result>list.jsp</result>
+        </action>
     </package>
 </struts>

@@ -31,7 +31,7 @@
     </key>
     <column id="15" parent="9" name="ISBN">
       <mandatory>1</mandatory>
-      <data-type>int(11)|0</data-type>
+      <data-type>char(13)|0</data-type>
     </column>
     <column id="16" parent="9" name="Title">
       <data-type>varchar(45)|0</data-type>

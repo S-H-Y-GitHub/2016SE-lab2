@@ -9,45 +9,55 @@ public class Action extends ActionSupport {
 
     private Book book;
     private ArrayList <Book> books;
-    private BookDao dao = new BookDao();
-
-    public Book getBook() {
-        return book;
-    }
-
-    public void setBook(Book book) {
-        this.book = book;
-    }
-
-    public Collection<Book> getBooks() {
-        return books;
-    }
-
-    public void setBooks(Collection<Book> books) {
-        this.books = books;
-    }
-
-    public String load() {
-        book = dao.getBook(isbn);
-        return SUCCESS;
-    }
+    private BookDao bookdao = new BookDao();
+    private AuthorDao authordao = new AuthorDao();
+    private String isbn;
+    private String name;
 
     public String list() {
-        books = dao.getBooks();
-        return SUCCESS;
-    }
-
-    public String store() {
-        dao.storeBook(book);
+        books = bookdao.getAll();
         return SUCCESS;
     }
 
     public String remove() {
-        if(null != isbn) {
-            dao.removeBook(isbn);
-        } else {
-            dao.removeBooks(isbns);
-        }
+        bookdao.remove(isbn);
         return SUCCESS;
+    }
+
+    public String searchAuthor() {
+        authordao.search(name);
+        return SUCCESS;
+    }
+    public String load() {
+        book = bookdao.getBook(isbn);
+        return SUCCESS;
+    }
+
+    public String store() {
+        bookdao.storeBook(book);
+        return SUCCESS;
+    }
+
+
+
+    public Book getBook() {
+        return book;
+    }
+    public void setBook(Book book) {
+        this.book = book;
+    }
+
+    public ArrayList<Book> getBooks() {
+        return books;
+    }
+    public void setBooks(ArrayList<Book> books) {
+        this.books = books;
+    }
+
+    public String getIsbn() {
+        return isbn;
+    }
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
     }
 }

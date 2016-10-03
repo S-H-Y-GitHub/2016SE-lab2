@@ -1,22 +1,21 @@
 package zzy.model;
 
 import java.sql.Date;
-import java.util.*;
 
 public class Book {
 
-    private int ISBN;
+    private String ISBN;
     private String Title;
     private int AuthorID;
     private String Publisher;
     private Date PublishDate;
     private float Price;
 
-    public void setISBN(int ISBN) {
+    public void setISBN(String ISBN) {
         this.ISBN = ISBN;
     }
 
-    public long getISBN() {
+    public String getISBN() {
         return ISBN;
     }
 
