@@ -1,4 +1,4 @@
-package book.dao;
+package zzy.dao;
 
 import java.sql.DriverManager;
 import java.sql.ResultSet;
@@ -7,13 +7,7 @@ import java.sql.Connection;
 import java.sql.Statement;
 
 public class BookDao {
-    // JDBC 驱动名及数据库 URL
-    static final String JDBC_DRIVER = "com.mysql.jdbc.Driver";
-    static final String DB_URL = "jdbc:mysql://localhost:3306/bookdb";
 
-    // 数据库的用户名与密码，需要根据自己的设置
-    static final String USER = "root";
-    static final String PASS = "zzyadmin";
     public static void main(String[] args) throws Exception {
         Connection conn = null;
         String sql;
@@ -28,7 +22,7 @@ public class BookDao {
 
             System.out.println("成功加载MySQL驱动程序");
             // 一个Connection代表一个数据库连接
-            conn = DriverManager.getConnection(DB_URL, USER, PASS);
+            conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookdb", "root", "zzyadmin");
             // Statement里面带有很多方法，比如executeUpdate可以实现插入，更新和删除等
             Statement stmt = conn.createStatement();
             sql = "select * from bookdb.book";

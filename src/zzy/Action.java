@@ -1,13 +1,8 @@
-package book.action;
-
-import java.util.Collection;
-
-import book.dao.BookDao;
-import book.model.Book;
+package zzy;
 
 import com.opensymphony.xwork2.ActionSupport;
 
-public class BookAction extends ActionSupport {
+public class Action extends ActionSupport {
 /*    private static final long serialVersionUID = 872316812305356L;
 
     private String isbn;
@@ -17,11 +12,11 @@ public class BookAction extends ActionSupport {
     private BookDao dao =  BookDao.getInstance();
 
     public Book getBook() {
-        return book;
+        return zzy;
     }
 
-    public void setBook(Book book) {
-        this.book = book;
+    public void setBook(Book zzy) {
+        this.zzy = zzy;
     }
 
     public String getIsbn() {
