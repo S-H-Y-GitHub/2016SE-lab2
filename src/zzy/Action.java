@@ -28,15 +28,6 @@ public class Action extends ActionSupport {
         authordao.search(name);
         return SUCCESS;
     }
-    public String load() {
-        book = bookdao.getBook(isbn);
-        return SUCCESS;
-    }
-
-    public String store() {
-        bookdao.storeBook(book);
-        return SUCCESS;
-    }
 
 
 
