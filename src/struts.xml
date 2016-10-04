@@ -1,20 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!DOCTYPE struts PUBLIC
-        "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
-        "http://struts.apache.org/dtds/struts-2.3.dtd">
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
 
 <struts>
-    <include file="struts-default.xml"/>
-    <package name="Book_Management" extends="struts-default">
-        <action name="List" class="zzy.Action" method="list">
-            <result>list.jsp</result>
-        </action>
-        <action name="Remove" class="zzy.Action" method="remove">
-            <result type="redirect">List.action</result>
-        </action>
-        <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
-            <result>list.jsp</result>
-        </action>
-    </package>
+  <include file="struts-default.xml"/>
+  <package name="Book_Management" extends="struts-default">
+    <action name="List" class="zzy.Action" method="list">
+      <result>list.jsp</result>
+    </action>
+    <action name="showDetails" class="zzy.Action" method="showDetails">
+      <result name="success">details.jsp</result>
+      <result name="error">#</result>
+    </action>
+    <action name="remove" class="zzy.Action" method="remove">
+      <result type="redirect">List.action</result>
+    </action>
+    <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
+      <result>list.jsp</result>
+    </action>
+  </package>
 </struts>

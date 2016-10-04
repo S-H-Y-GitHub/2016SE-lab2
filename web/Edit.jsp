@@ -8,7 +8,7 @@
 </head>
 <body>
 <h2>
-    <s:if test="null == zzy">
+    <s:if test="null == book">
         Add Book
     </s:if>
     <s:else>
