@@ -173,4 +173,20 @@ public class BookDao
 			return Boolean.FALSE;
 		}
 	}
+	//查找书籍是否存在
+	public Boolean hasISBN(String isbn)
+	{
+		String sql = "select * from book where ISBN='" + isbn + "';";
+		try
+		{
+			ResultSet rs = stmt.executeQuery(sql);
+			return rs.next();
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误");
+			e.printStackTrace();
+			return false;
+		}
+	}
 }

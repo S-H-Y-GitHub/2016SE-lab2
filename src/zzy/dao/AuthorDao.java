@@ -1,8 +1,6 @@
 package zzy.dao;
 
 import zzy.model.*;
-
-import java.security.PublicKey;
 import java.sql.*;
 
 public class AuthorDao
@@ -12,7 +10,7 @@ public class AuthorDao
 	//构造方法，进行数据库的连接
 	public AuthorDao()
 	{
-		Connection conn = null;
+		Connection conn;
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -30,10 +28,11 @@ public class AuthorDao
 			e.printStackTrace();
 		}
 	}
+	
 	//根据作者的ID返回这个作者的所有相关信息
 	public Author get(int AuthorID)
 	{
-		String sql = "select * from author WHERE AuthorID =" + AuthorID + ";";
+		String sql = "select * from author WHERE AuthorID=" + AuthorID + ";";
 		try
 		{
 			ResultSet rs = stmt.executeQuery(sql);
@@ -119,6 +118,22 @@ public class AuthorDao
 			System.err.println("MySQL查询错误");
 			e.printStackTrace();
 			return Boolean.FALSE;
+		}
+	}
+	//查找作者是否存在
+	public Boolean hasAuthorID(int AuthorID)
+	{
+		String sql = "select * from author WHERE AuthorID=" + AuthorID + ";";
+		try
+		{
+			ResultSet rs = stmt.executeQuery(sql);
+			return rs.next();
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误");
+			e.printStackTrace();
+			return false;
 		}
 	}
 }
