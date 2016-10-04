@@ -55,7 +55,6 @@ public class Action extends ActionSupport
 	{
 		return book;
 	}
-	
 	public void setBook(Book book)
 	{
 		this.book = book;
@@ -65,7 +64,6 @@ public class Action extends ActionSupport
 	{
 		return books;
 	}
-	
 	public void setBooks(ArrayList<Book> books)
 	{
 		this.books = books;
@@ -75,9 +73,11 @@ public class Action extends ActionSupport
 	{
 		return isbn;
 	}
-	
 	public void setIsbn(String isbn)
 	{
 		this.isbn = isbn;
 	}
+	
+	public Author getAuthor(){return author;}
+	public void setAuthor(Author author){this.author = author;}
 }

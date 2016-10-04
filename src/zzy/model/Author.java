@@ -1,10 +1,7 @@
 package zzy.model;
 
-import java.util.*;
-
 public class Author
 {
-	
 	private int AuthorID;
 	private String Name;
 	private int Age;
@@ -14,7 +11,6 @@ public class Author
 	{
 		this.AuthorID = AuthorID;
 	}
-	
 	public int getAuthorID()
 	{
 		return AuthorID;
@@ -24,7 +20,6 @@ public class Author
 	{
 		this.Name = Name;
 	}
-	
 	public String getName()
 	{
 		return Name;
@@ -34,7 +29,6 @@ public class Author
 	{
 		this.Age = Age;
 	}
-	
 	public int getAge()
 	{
 		return Age;
@@ -44,7 +38,6 @@ public class Author
 	{
 		this.Country = Country;
 	}
-	
 	public String getCountry()
 	{
 		return Country;

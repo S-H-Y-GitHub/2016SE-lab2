@@ -4,7 +4,6 @@ import java.sql.Date;
 
 public class Book
 {
-	
 	private String ISBN;
 	private String Title;
 	private int AuthorID;
@@ -16,7 +15,6 @@ public class Book
 	{
 		this.ISBN = ISBN;
 	}
-	
 	public String getISBN()
 	{
 		return ISBN;
@@ -26,7 +24,6 @@ public class Book
 	{
 		this.Title = Title;
 	}
-	
 	public String getTitle()
 	{
 		return Title;
@@ -36,7 +33,6 @@ public class Book
 	{
 		this.AuthorID = AuthorID;
 	}
-	
 	public int getAuthorID()
 	{
 		return AuthorID;
@@ -46,7 +42,6 @@ public class Book
 	{
 		this.Publisher = Publisher;
 	}
-	
 	public String getPublisher()
 	{
 		return Publisher;
@@ -56,7 +51,6 @@ public class Book
 	{
 		this.PublishDate = PublishDate;
 	}
-	
 	public Date getPublishDate()
 	{
 		return PublishDate;
@@ -66,7 +60,6 @@ public class Book
 	{
 		this.Price = Price;
 	}
-	
 	public float getPrice()
 	{
 		return Price;
