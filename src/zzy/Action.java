@@ -47,7 +47,7 @@ public class Action extends ActionSupport
 		author = authordao.search(name);
 		if(null != author)
 		{
-			books = bookdao.getBooksByAuthor(author.getAuthorID());
+			books = bookdao.getByAuthor(author.getAuthorID());
 			if(null != books)
 				return SUCCESS;
 			else

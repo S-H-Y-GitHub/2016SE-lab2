@@ -20,7 +20,6 @@
 </head>
 <body>
 <div class="container">
-  
   <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
@@ -41,8 +40,8 @@
         </td>
         <td>$<s:property value="price"/></td>
         <td>
-          <a href='#'>Edit</a>&nbsp;<a
-            href='<s:url action="remove"><s:param name="isbn" value="ISBN" /></s:url>'>Delete</a>
+          <a href='#'>Edit</a>&nbsp;
+          <a href='<s:url action="remove"><s:param name="isbn" value="ISBN" /></s:url>'>Delete</a>
         </td>
       </tr>
     </s:iterator>

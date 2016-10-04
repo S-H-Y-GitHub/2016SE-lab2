@@ -27,9 +27,8 @@
         label="根据作者姓名搜索"
         name="name"
         cssClass="form-control form-group"
-        placeholder="Search"
-        inputPrependIcon="search"
-        tooltip="输入作者的姓名（区分大小写）"/>
+        placeholder="输入作者的姓名（区分大小写）"
+        inputPrependIcon="search"/>
     <s:submit value="搜索" cssClass="form-group btn btn-primary btn-lg btn-block"/>
   </s:form>
 </div>

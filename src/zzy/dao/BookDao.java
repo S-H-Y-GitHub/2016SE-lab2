@@ -1,7 +1,6 @@
 package zzy.dao;
 
 import zzy.model.*;
-
 import java.sql.*;
 import java.util.*;
 
@@ -12,7 +11,7 @@ public class BookDao
 	//构造方法，进行数据库的连接
 	public BookDao()
 	{
-		Connection conn = null;
+		Connection conn;
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
@@ -60,7 +59,7 @@ public class BookDao
 			return null;
 		}
 	}
-	//提取一本书
+	//基于ISBN提取一本书
 	public Book get(String isbn)
 	{
 		String sql = "select * from book where ISBN='" + isbn + "';";
@@ -95,9 +94,7 @@ public class BookDao
 		try
 		{
 			if (stmt.executeUpdate(sql) == 1)
-			{
 				return Boolean.TRUE;
-			}
 			else
 				return Boolean.FALSE;
 		}
@@ -108,7 +105,7 @@ public class BookDao
 		}
 	}
 	//获取一个作者的所有书籍
-	public ArrayList<Book> getBooksByAuthor(int authorid)
+	public ArrayList<Book> getByAuthor(int authorid)
 	{
 		String sql = "select * from book WHERE AuthorID =" + authorid + ";";
 		try
@@ -134,6 +131,46 @@ public class BookDao
 			System.err.println("MySQL查询错误");
 			e.printStackTrace();
 			return null;
+		}
+	}
+	//添加一本书
+	public Boolean add(Book book)
+	{
+		String sql = "INSERT INTO book(ISBN, Title, AuthorID, Publisher, PublishDate, Price) VALUES(" +
+				book.getISBN() + ",'" + book.getTitle() + "'," + book.getAuthorID() + ",'" +
+				book.getPublisher() + "','" + book.getPublishDate() + "'," + book.getPrice() + ");";
+		try
+		{
+			if (stmt.executeUpdate(sql) == 1)
+				return Boolean.TRUE;
+			else
+				return Boolean.FALSE;
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误");
+			e.printStackTrace();
+			return Boolean.FALSE;
+		}
+	}
+	//更新书籍信息
+	public Boolean update(Book book)
+	{
+		String sql = "update book set Title='" + book.getTitle() + "',AuthorID=" + book.getAuthorID() + "Publisher='"
+				+ book.getPublisher() + "',PublishDate='" + book.getPublishDate() + "',Price=" + book.getPrice()
+				+ " where ISBN=" + book.getISBN();
+		try
+		{
+			if (stmt.executeUpdate(sql) == 1)
+				return Boolean.TRUE;
+			else
+				return Boolean.FALSE;
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误");
+			e.printStackTrace();
+			return Boolean.FALSE;
 		}
 	}
 }
