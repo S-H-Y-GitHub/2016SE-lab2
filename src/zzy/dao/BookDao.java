@@ -87,7 +87,6 @@ public class BookDao
 			e.printStackTrace();
 			return null;
 		}
-		
 	}
 	//删除已经存在的书籍
 	public Boolean remove(String ISBN)
@@ -106,6 +105,35 @@ public class BookDao
 		{
 			e.printStackTrace();
 			return Boolean.FALSE;
+		}
+	}
+	//获取一个作者的所有书籍
+	public ArrayList<Book> getBooksByAuthor(int authorid)
+	{
+		String sql = "select * from book WHERE AuthorID =" + authorid + ";";
+		try
+		{
+			ResultSet rs = stmt.executeQuery(sql);
+			ArrayList<Book> books;
+			books = new ArrayList<Book>();
+			while (rs.next())
+			{
+				Book book = new Book();
+				book.setISBN(rs.getString("ISBN"));
+				book.setTitle(rs.getString("Title"));
+				book.setAuthorID(rs.getInt("AuthorID"));
+				book.setPublisher(rs.getString("Publisher"));
+				book.setPublishDate(rs.getDate("PublishDate"));
+				book.setPrice(rs.getFloat("Price"));
+				books.add(book);
+			}
+			return books;
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误");
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

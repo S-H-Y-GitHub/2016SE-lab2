@@ -1,17 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-
+<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
   <title>图书详情</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
+  
+  <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
+  <!--[if lt IE 9]>
+  <script src="js/html5shiv.js"></script>
+  <![endif]-->
+  
+  <sb:head/>
 </head>
 <body>
 <div class="container">
   <h3>书籍信息</h3>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
       <th width="25%">属性</th>
@@ -46,7 +51,7 @@
     </tbody>
   </table>
   <h3>作者信息</h3>
-  <table class="table table-bordered table-striped">
+  <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
       <th width="25%">属性</th>
@@ -73,7 +78,5 @@
     </tbody>
   </table>
 </div>
-<script src="js/jquery-3.1.1.min.js" type="javascript"></script>
-<script src="js/bootstrap.min.js" type="javascript"></script>
 </body>
 </html>

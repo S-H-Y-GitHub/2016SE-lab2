@@ -1,9 +1,7 @@
 package zzy.dao;
 
 import zzy.model.*;
-
 import java.sql.*;
-import java.util.*;
 
 public class AuthorDao
 {
@@ -55,7 +53,7 @@ public class AuthorDao
 			return null;
 		}
 	}
-	public void search(String name)
+	public Author search(String name)
 	{
 		String sql1 = "select * from author where Name like '%" + name + "%';";
 		try
@@ -68,30 +66,15 @@ public class AuthorDao
 				author.setName(name);
 				author.setAge(rs1.getInt("Age"));
 				author.setCountry(rs1.getString("Country"));
-				String sql2 = "select * from book where AuthorID=" + author.getAuthorID() + ";";
-				ResultSet rs2 = stmt.executeQuery(sql2);
-				while (rs2.next())
-				{
-					Book book = new Book();
-					book.setISBN(rs2.getString("ISBN"));
-					book.setTitle(rs2.getString("Title"));
-					book.setPublisher(rs2.getString("Publisher"));
-					book.setPublishDate(rs2.getDate("PublishDate"));
-					book.setPrice(rs2.getFloat("Price"));
-					book.setAuthorID(rs2.getInt("AuthorID"));
-					//TODO 结果已经生成好了，需要返回回去
-				}
-				return;
+				return author;
 			}
 			else
-			{
-				return;
-			}
+				return null;
 		}
 		catch (Exception e)
 		{
 			e.printStackTrace();
-			return;
+			return null;
 		}
 	}
 }
