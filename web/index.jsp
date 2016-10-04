@@ -17,12 +17,16 @@
 
 <div class="container">
   <a href="List.action"><h1 class="text-center">hello world!!</h1></a>
-  <form role="form" class="form-inline">
-    <div class="form-group">
-      <label for="exampleInputEmail1">Email address</label><input type="email" class="form-control" id="exampleInputEmail1" />
-      <button type="submit" class="btn btn-default">Search</button>
-    </div>
-  </form>
+  <s:form action="searchAuthor" method="POST" theme="simple" cssClass="well form-group">
+    <s:textfield
+        cssClass="form-control"
+        label="根据作者姓名搜索"
+        placeholder="Search"
+        name="name"
+        tooltip="输入作者的姓名（区分大小写）"/>
+    <br>
+    <s:submit value="搜索" cssClass="btn btn-primary btn-lg btn-block"/>
+  </s:form>
 </div>
 
 </body>

@@ -18,7 +18,8 @@
       <result type="redirect">List.action</result>
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
-      <result>list.jsp</result>
+      <result name="success">list.jsp</result>
+      <result name="error">index.jsp</result>
     </action>
   </package>
 </struts>

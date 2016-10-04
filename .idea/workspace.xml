@@ -2,17 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="add some features">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/html5shiv.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/struts2_5_2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_3_20_1.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Struts_2_2_3_20_1.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/Action.java" afterPath="$PROJECT_DIR$/src/zzy/Action.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/dao/AuthorDao.java" afterPath="$PROJECT_DIR$/src/zzy/dao/AuthorDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/dao/BookDao.java" afterPath="$PROJECT_DIR$/src/zzy/dao/BookDao.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/Edit.jsp" afterPath="$PROJECT_DIR$/web/Edit.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/details.jsp" afterPath="$PROJECT_DIR$/web/details.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/list.jsp" afterPath="$PROJECT_DIR$/web/list.jsp" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -45,11 +38,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="details.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/details.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+            <state relative-caret-position="520">
+              <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="188">
+              <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -58,7 +61,7 @@
       <file leaf-file-name="Edit.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/Edit.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="32">
+            <state relative-caret-position="208">
               <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
               <folding />
             </state>
@@ -68,18 +71,8 @@
       <file leaf-file-name="list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="604">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="html5shiv.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/js/html5shiv.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="708">
+              <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -87,14 +80,14 @@
       </file>
       <file leaf-file-name="struts.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/struts.xml">
-          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-            <state />
-          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
+            <state relative-caret-position="624">
+              <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
               <folding />
             </state>
+          </provider>
+          <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+            <state />
           </provider>
         </entry>
       </file>
@@ -108,21 +101,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/index.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="520">
-              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="604">
+              <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -131,9 +114,10 @@
       <file leaf-file-name="BookDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zzy/dao/BookDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1800">
+            <state relative-caret-position="760">
               <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
               <folding>
+                <element signature="imports" expanded="false" />
                 <marker date="1475570698649" expanded="true" signature="633:651" ph="select * fro... book" />
                 <marker date="1475570698649" expanded="true" signature="1308:1338" ph="select * fro... book" />
                 <marker date="1475570698649" expanded="true" signature="1308:1352" ph="select * fro... book" />
@@ -149,12 +133,12 @@
       <file leaf-file-name="AuthorDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="502">
-              <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
+            <state relative-caret-position="266">
+              <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1475568267829" expanded="true" signature="604:641" ph="select * fro... author" />
-                <marker date="1475568267829" expanded="true" signature="1164:1217" ph="select * fro... author" />
+                <marker date="1475577912379" expanded="true" signature="604:641" ph="select * fro... author" />
+                <marker date="1475577912379" expanded="true" signature="1164:1212" ph="select * fro... author" />
               </folding>
             </state>
           </provider>
@@ -190,18 +174,18 @@
         <option value="dbtable:/a6174d5f/16dd01f5-4709-40a1-84c0-4f5bee795993/bookdb.author" />
         <option value="$PROJECT_DIR$/src/book/model/Book.java" />
         <option value="E:/zzy/Desktop/BookLibrary-master/src/action/BookAction.java" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
         <option value="$PROJECT_DIR$/src/zzy/model/Book.java" />
         <option value="$PROJECT_DIR$/src/zzy/model/Author.java" />
-        <option value="$PROJECT_DIR$/src/zzy/dao/AuthorDao.java" />
         <option value="dbtable:/a6174d5f/16dd01f5-4709-40a1-84c0-4f5bee795993/bookdb.book" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/src/zzy/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/src/zzy/Action.java" />
         <option value="$PROJECT_DIR$/web/list.jsp" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/Edit.jsp" />
         <option value="$PROJECT_DIR$/web/details.jsp" />
+        <option value="$PROJECT_DIR$/src/zzy/dao/AuthorDao.java" />
+        <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -322,6 +306,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -448,25 +434,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
         </subPane>
       </pane>
       <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1060,6 +1030,7 @@
       <workItem from="1475550410403" duration="9355000" />
       <workItem from="1475561120498" duration="1928000" />
       <workItem from="1475567605464" duration="5780000" />
+      <workItem from="1475576938895" duration="2734000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1072,7 +1043,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="51505000" />
+    <option name="totallyTimeSpent" value="54239000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1085,7 +1056,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="调试" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34140968" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -1109,7 +1080,6 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24973205" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="检验" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="19" side_tool="false" content_ui="tabs" />
@@ -1124,6 +1094,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.49785638" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32902467" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="找到" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32954547" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -1175,19 +1146,24 @@
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="182">
           <caret line="7" column="39" selection-start-line="7" selection-start-column="39" selection-end-line="7" selection-end-column="39" />
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider editor-type-id="MarkdownFxPreviewEditor">
         <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="52">
+          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
+        </state>
       </provider>
       <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
         <state split_layout="FIRST">
@@ -1195,11 +1171,6 @@
             <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
           </first_editor>
           <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="52">
-          <caret line="2" column="38" selection-start-line="2" selection-start-column="38" selection-end-line="2" selection-end-column="38" />
         </state>
       </provider>
     </entry>
@@ -1501,15 +1472,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/a6174d5f/16dd01f5-4709-40a1-84c0-4f5bee795993/bookdb.book">
-      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="10" column="36" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1517,87 +1487,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-538">
           <caret line="239" column="38" selection-start-line="239" selection-start-column="38" selection-end-line="239" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#7621#7622#0" expanded="false" />
-            <element signature="e#7648#7649#0" expanded="false" />
-            <element signature="e#7678#7679#0" expanded="false" />
-            <element signature="e#7698#7699#0" expanded="false" />
-            <element signature="e#7735#7736#0" expanded="false" />
-            <element signature="e#7758#7759#0" expanded="false" />
-            <element signature="e#7783#7784#0" expanded="false" />
-            <element signature="e#7801#7802#0" expanded="false" />
-            <element signature="e#7849#7850#0" expanded="false" />
-            <element signature="e#7874#7875#0" expanded="false" />
-            <element signature="e#7912#7913#0" expanded="false" />
-            <element signature="e#7936#7937#0" expanded="false" />
-            <element signature="e#7971#7972#0" expanded="false" />
-            <element signature="e#7994#7995#0" expanded="false" />
-            <element signature="e#8020#8021#0" expanded="false" />
-            <element signature="e#8038#8039#0" expanded="false" />
-            <element signature="e#8075#8076#0" expanded="false" />
-            <element signature="e#8098#8099#0" expanded="false" />
-            <element signature="e#8126#8127#0" expanded="false" />
-            <element signature="e#8144#8145#0" expanded="false" />
-            <element signature="e#8183#8184#0" expanded="false" />
-            <element signature="e#8208#8209#0" expanded="false" />
-            <element signature="e#8237#8238#0" expanded="false" />
-            <element signature="e#8256#8257#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/web/Edit.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="19" column="65" selection-start-line="19" selection-start-column="65" selection-end-line="19" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/dao/BookDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
-          <folding>
-            <marker date="1475570698649" expanded="true" signature="633:651" ph="select * fro... book" />
-            <marker date="1475570698649" expanded="true" signature="1308:1338" ph="select * fro... book" />
-            <marker date="1475570698649" expanded="true" signature="1308:1352" ph="select * fro... book" />
-            <marker date="1475570698649" expanded="true" signature="1960:1976" ph="delete from " />
-            <marker date="1475570698649" expanded="true" signature="1960:1988" ph="delete from " />
-            <marker date="1475570698649" expanded="true" signature="1960:2002" ph="delete from " />
-            <marker date="1475570698649" expanded="true" signature="2297:2332" ph="select * fro... book" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="502">
-          <caret line="69" column="13" selection-start-line="69" selection-start-column="13" selection-end-line="69" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1475568267829" expanded="true" signature="604:641" ph="select * fro... author" />
-            <marker date="1475568267829" expanded="true" signature="1164:1217" ph="select * fro... author" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="520">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+        <state relative-caret-position="208">
+          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
           <folding />
         </state>
       </provider>
@@ -1610,34 +1506,82 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/list.jsp">
+    <entry file="file://$PROJECT_DIR$/src/zzy/dao/BookDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="760">
+          <caret line="135" column="24" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <marker date="1475570698649" expanded="true" signature="633:651" ph="select * fro... book" />
+            <marker date="1475570698649" expanded="true" signature="1308:1338" ph="select * fro... book" />
+            <marker date="1475570698649" expanded="true" signature="1308:1352" ph="select * fro... book" />
+            <marker date="1475570698649" expanded="true" signature="1960:1976" ph="delete from " />
+            <marker date="1475570698649" expanded="true" signature="1960:1988" ph="delete from " />
+            <marker date="1475570698649" expanded="true" signature="1960:2002" ph="delete from " />
+            <marker date="1475570698649" expanded="true" signature="2297:2332" ph="select * fro... book" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+          <caret line="53" column="29" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="37" selection-start-line="11" selection-start-column="37" selection-end-line="11" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="64" column="59" selection-start-line="64" selection-start-column="59" selection-end-line="64" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1475577912379" expanded="true" signature="604:641" ph="select * fro... author" />
+            <marker date="1475577912379" expanded="true" signature="1164:1212" ph="select * fro... author" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/list.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="708">
+          <caret line="35" column="13" selection-start-line="35" selection-start-column="13" selection-end-line="35" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="24" column="9" selection-start-line="24" selection-start-column="9" selection-end-line="24" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/details.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="520">
+          <caret line="23" column="9" selection-start-line="23" selection-start-column="9" selection-end-line="23" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/Edit.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="32">
-          <caret line="8" column="2" selection-start-line="8" selection-start-column="2" selection-end-line="8" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/details.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="23" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
+        <state relative-caret-position="188">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
           <folding />
         </state>
       </provider>

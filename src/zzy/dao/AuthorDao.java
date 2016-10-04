@@ -55,7 +55,7 @@ public class AuthorDao
 	}
 	public Author search(String name)
 	{
-		String sql1 = "select * from author where Name like '%" + name + "%';";
+		String sql1 = "select * from author where Name = '" + name + "';";
 		try
 		{
 			ResultSet rs1 = stmt.executeQuery(sql1);
