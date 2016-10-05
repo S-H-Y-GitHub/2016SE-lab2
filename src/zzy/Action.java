@@ -1,5 +1,6 @@
 package zzy;
 
+import com.sun.xml.internal.bind.v2.TODO;
 import zzy.model.*;
 import zzy.dao.*;
 import java.sql.Date;
@@ -91,7 +92,7 @@ public class Action extends ActionSupport
 		else
 			return ERROR;
 	}
-	//添加一本新书，需要规定author和book
+	//添加一本新书，需要规定author和book // FIXME: 2016/10/6 这样写是不行的，加上表单处理。
 	public String addBook()
 	{
 		if((!authordao.hasAuthorID(author.getAuthorID())) )
@@ -120,14 +121,37 @@ public class Action extends ActionSupport
 	//修改书籍信息
 	public String editBook()
 	{
+		// TODO: 2016/10/6  
 		return null;
 	}
 	//修改作者信息
 	public String editAuthor()
 	{
+		// TODO: 2016/10/6  
 		return null;
 	}
 	
+	/**
+	 * 将收到的表单信息转换为book对象，需准备好表单信息
+	 * @return Book对象
+	 */
+	private Book formToBook()
+	{
+		Book book = new Book();
+		// TODO: 2016/10/6  
+		return book;
+	}
+	
+	/**
+	 * 将收到的表单信息转换为Author对象，需准备好表单信息
+	 * @return Author对象
+	 */
+	private Author formToAuthor()
+	{
+		Author author = new Author();
+		// TODO: 2016/10/6  
+		return author;
+	}
 	
 	public Book getBook() {return book;}
 	public void setBook(Book book) {this.book = book;}
