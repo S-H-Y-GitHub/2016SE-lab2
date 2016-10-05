@@ -18,7 +18,7 @@
       <result name="error">index.jsp</result>
     </action>
     <action name="showAuthorDetails" class="zzy.Action" method="showAuthorDetails">
-      <result name="success">searchResult.jsp</result>
+      <result name="success">authorDetails.jsp</result>
     </action>
     <action name="removeBook" class="zzy.Action" method="removeBook">
       <result type="redirect">listBook.action</result>

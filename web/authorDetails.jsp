@@ -38,34 +38,61 @@
     </div>
     <div class="col-md-9">
       <div class="page-header">
-        <h3>作者列表</h3>
+        <h3>作者信息</h3>
+      </div>
+      <table class="table table-bordered table-striped table-hover">
+        <thead>
+        <tr>
+          <th width="25%">属性</th>
+          <th>值</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>ID</td>
+          <td><s:property value="author.AuthorID"/></td>
+        </tr>
+        <tr>
+          <td>姓名</td>
+          <td><s:property value="author.Name"/></td>
+        </tr>
+        <tr>
+          <td>年龄</td>
+          <td><s:property value="author.Age"/></td>
+        </tr>
+        <tr>
+          <td>国家</td>
+          <td><s:property value="author.Country"/></td>
+        </tr>
+        </tbody>
+      </table>
+      <div class="page-header">
+        <h3>书籍列表</h3>
       </div>
       <table class="table table-bordered table-striped table-hover" >
         <thead>
         <tr>
-          <th style='vertical-align: middle;'>ID</th>
-          <th style='vertical-align: middle;'>姓名
-            <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击姓名查看详情"></span>
+          <th style='vertical-align: middle;'>ISBN</th>
+          <th style='vertical-align: middle;'>书名
+            <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击书名查看详情"></span>
           </th>
-          <th style='vertical-align: middle;'>年龄</th>
-          <th style='vertical-align: middle;'>国家</th>
+          <th style='vertical-align: middle;'>价格</th>
           <th style='vertical-align: middle;'>操作</th>
         </tr>
         </thead>
         <tbody>
-        <s:iterator value="authors">
+        <s:iterator value="books">
           <tr>
-            <td style='vertical-align: middle;'><s:property value="AuthorID"/></td>
+            <td style='vertical-align: middle;'><s:property value="ISBN"/></td>
             <td style='vertical-align: middle;'>
-              <a href='<s:url action="showAuthorDetails"><s:param name="authorID" value="AuthorID" /></s:url>'>
-                <s:property value="Name"/>
+              <a href='<s:url action="showBookDetails"><s:param name="ISBN" value="ISBN" /></s:url>'>
+                <s:property value="title"/>
               </a>
             </td>
-            <td style='vertical-align: middle;'>$<s:property value="Age"/></td>
-            <td style='vertical-align: middle;'>$<s:property value="Country"/></td>
+            <td style='vertical-align: middle;'>$<s:property value="price"/></td>
             <td style='vertical-align: middle;'>
-              <a href='<s:url action="editAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
-              <a href='<s:url action="removeAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
+              <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
+              <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
             </td>
           </tr>
         </s:iterator>
@@ -74,7 +101,6 @@
     </div>
   </div>
 </div>
-
 <footer
     style="padding-top: 40px;padding-bottom: 40px;margin-top: 100px;color: #777;text-align: center;border-top: 1px solid #e5e5e5;">
   Copyright &copy; 2016 <a href="https://s-h-y-github.github.io/">率怀一</a> ❤ Made with Love <br>
