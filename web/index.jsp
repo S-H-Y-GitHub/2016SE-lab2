@@ -18,9 +18,9 @@
   <sb:head/>
 </head>
 <body>
-
-<div class="container">
-  
+<div class="container" style="margin-top: 50px";>
+  <div Class="row clearfix">
+    
   <a href="List.action"><h1 class="text-center">hello world!!</h1></a>
   <s:form action="searchAuthor" method="POST" theme="bootstrap" cssClass="well form-group">
     <s:textfield
@@ -31,7 +31,8 @@
         inputPrependIcon="search"/>
     <s:submit value="搜索" cssClass="form-group btn btn-primary btn-lg btn-block"/>
   </s:form>
+    
+  </div>
 </div>
-
 </body>
 </html>
