@@ -37,7 +37,7 @@ public class Action extends ActionSupport
 		return SUCCESS;
 	}
 	//显示一本书的相关信息
-	public String showDetails()
+	public String showBookDetails()
 	{
 		book = bookdao.get(ISBN);
 		if (null != book)

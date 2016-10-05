@@ -13,8 +13,8 @@
     <action name="listAuthor" class="zzy.Action" method="listAuthor">
       <result name="success">authorList.jsp</result>
     </action>
-    <action name="showDetails" class="zzy.Action" method="showDetails">
-      <result name="success">details.jsp</result>
+    <action name="showBookDetails" class="zzy.Action" method="showBookDetails">
+      <result name="success">bookDetails.jsp</result>
       <result name="error">index.jsp</result>
     </action>
     <action name="removeBook" class="zzy.Action" method="removeBook">
@@ -24,20 +24,20 @@
       <result type="redirect">listAuthor.action</result>
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
-      <result name="success">bookList.jsp</result>
-      <result name="error">index.jsp</result>
+      <result name="success">searchResult.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="addBook" class="zzy.Action" method="addBook">
-      <result name="success">addBook.jsp</result>
+      <result type="redirect">listBook.action</result>
     </action>
     <action name="addAuthor" class="zzy.Action" method="addAuthor">
-      <result name="success">addAuthor.jsp</result>
+      <result type="redirect">listAuthor.action</result>
     </action>
     <action name="editBook" class="zzy.Action" method="editBook">
-      <result name="success">editBook.jsp</result>
+      <result type="redirect">listBook.action</result>
     </action>
     <action name="editAuthor" class="zzy.Action" method="editAuthor">
-      <result name="success">editAuthor.jsp</result>
+      <result type="redirect">listAuthor.action</result>
     </action>
   </package>
 </struts>

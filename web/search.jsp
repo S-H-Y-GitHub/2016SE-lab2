@@ -10,8 +10,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="率怀一">
   <title>图书管理系统</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -20,36 +21,40 @@
   <sb:head/>
 </head>
 <body>
-<div class="container container-fluid" style="margin-top: 50px">
+<div class="container container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <div class="well">
+      <div class="well" style="margin-top: 40px">
         <ul class="nav nav-pills nav-stacked">
           <li style="padding: 10px 10px; font-size: 20px">图书管理</li>
-          <li class="active"><a href="List.action">书籍列表</a></li>
-          <li><a href="#">新增图书</a></li>
-          <li><a href="#">搜索图书</a></li>
+          <li><a href="listBook.action">书籍列表</a></li>
+          <li><a href="addBook.jsp">新增图书</a></li>
           <li style="padding: 10px 10px; font-size: 20px">作者管理</li>
-          <li><a href="#">作者列表</a></li>
-          <li><a href="#">新增作者</a></li>
+          <li><a href="listAuthor.action">作者列表</a></li>
+          <li class="active"><a href="search.jsp">搜索作品</a></li>
+          <li><a href="addAuthor.jsp">新增作者</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="col-md-9">
-    <s:form action="searchAuthor" method="POST" theme="bootstrap" cssClass="well form-group">
-      <s:textfield
-          label="根据作者姓名搜索"
-          name="name"
-          cssClass="form-control form-group"
-          placeholder="输入作者的姓名（区分大小写）"
-          inputPrependIcon="search"/>
-      <s:submit value="搜索" cssClass="form-group btn btn-primary btn-lg btn-block"/>
-    </s:form>
+    <div class="col-md-9">
+      <div class="page-header">
+        <h3>根据作者姓名搜索作品</h3>
+      </div>
+      <s:form action="searchAuthor" method="POST" theme="bootstrap" cssClass="well form-group">
+        <s:textfield
+            name="name"
+            cssClass="form-control form-group"
+            placeholder="输入作者的姓名（区分大小写）"
+            inputPrependIcon="search"/>
+        <s:submit value="搜索" cssClass="form-group btn btn-primary btn-lg btn-block"/>
+      </s:form>
+    </div>
   </div>
 </div>
 <footer style="padding-top: 40px;padding-bottom: 40px;margin-top: 100px;color: #777;text-align: center;border-top: 1px solid #e5e5e5;">
-  &copy; <a href="https://s-h-y-github.github.io/">率怀一</a> 2016 ♪ Powered by <a href="http://struts.apache.org/">Struts</a>
+  Copyright &copy; 2016 <a href="https://s-h-y-github.github.io/">率怀一</a> ❤ Made with Love <br>
+  Theme by <a href="http://getbootstrap.com/">Bootstrap</a> ♪ Powered by <a href="http://struts.apache.org/">Struts</a>
 </footer>
 </body>
 </html>
+
