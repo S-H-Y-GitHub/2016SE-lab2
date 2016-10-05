@@ -67,7 +67,7 @@
         </tbody>
       </table>
       <div class="page-header">
-        <h3>书籍列表</h3>
+        <h3>著作列表</h3>
       </div>
       <table class="table table-bordered table-striped table-hover" >
         <thead>
