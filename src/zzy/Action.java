@@ -51,6 +51,16 @@ public class Action extends ActionSupport
 		else
 			return ERROR;
 	}
+	/**
+	 * 显示作者信息，需提供作者的AuthorID
+	 * @return 包含作者信息的author对象，包含他的所有作品的数组books
+	 */
+	public String showAuthorDetails()
+	{
+		author = authordao.get(AuthorID);
+		books = bookdao.getByAuthor(AuthorID);
+		return "success";
+	}
 	//删除一本书
 	public String removeBook()
 	{
@@ -157,4 +167,5 @@ public class Action extends ActionSupport
 	
 	public ArrayList<Author> getAuthors() {return authors;}
 	public void setAuthors(ArrayList<Author> authors) {this.authors = authors;}
+
 }

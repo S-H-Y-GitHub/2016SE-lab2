@@ -44,26 +44,28 @@
         <thead>
         <tr>
           <th style='vertical-align: middle;'>ISBN</th>
-          <th style='vertical-align: middle;'>书名</th>
+          <th style='vertical-align: middle;'>书名
+            <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击书名查看详情"></span>
+          </th>
           <th style='vertical-align: middle;'>价格</th>
           <th style='vertical-align: middle;'>操作</th>
         </tr>
         </thead>
         <tbody>
-        <s:iterator value="books">
-          <tr>
-            <td style='vertical-align: middle;'><s:property value="ISBN"/></td>
-            <td style='vertical-align: middle;'>
-              <a href='<s:url action="showBookDetails"><s:param name="ISBN" value="ISBN" /></s:url>'>
-                <s:property value="title"/>
-              </a>
-            </td>
-            <td style='vertical-align: middle;'>$<s:property value="price"/></td>
-            <td style='vertical-align: middle;'>
-              <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
-              <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
-            </td>
-          </tr>
+          <s:iterator value="books">
+            <tr>
+              <td style='vertical-align: middle;'><s:property value="ISBN"/></td>
+              <td style='vertical-align: middle;'>
+                <a href='<s:url action="showBookDetails"><s:param name="ISBN" value="ISBN" /></s:url>'>
+                  <s:property value="title"/>
+                </a>
+              </td>
+              <td style='vertical-align: middle;'>$<s:property value="price"/></td>
+              <td style='vertical-align: middle;'>
+                <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
+                <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
+              </td>
+            </tr>
         </s:iterator>
         </tbody>
       </table>
@@ -76,5 +78,6 @@
   Copyright &copy; 2016 <a href="https://s-h-y-github.github.io/">率怀一</a> ❤ Made with Love <br>
   Theme by <a href="http://getbootstrap.com/">Bootstrap</a> ♪ Powered by <a href="http://struts.apache.org/">Struts</a>
 </footer>
+<script language="JavaScript">$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
 </body>
 </html>
