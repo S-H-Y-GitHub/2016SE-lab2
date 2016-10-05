@@ -56,7 +56,7 @@ public class AuthorDao
 			return null;
 		}
 	}
-	//基于作者的姓名进行搜索
+	//基于作者的姓名进行搜索 todo 同名呢？
 	public Author search(String name)
 	{
 		String sql1 = "select * from author where Name = '" + name + "';";

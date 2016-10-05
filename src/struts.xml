@@ -7,18 +7,18 @@
 <struts>
   <include file="struts-default.xml"/>
   <package name="Book_Management" extends="struts-default">
-    <action name="List" class="zzy.Action" method="list">
-      <result>list.jsp</result>
+    <action name="list" class="zzy.Action" method="list">
+      <result>bookList.jsp</result>
     </action>
     <action name="showDetails" class="zzy.Action" method="showDetails">
       <result name="success">details.jsp</result>
       <result name="error">index.jsp</result>
     </action>
-    <action name="remove" class="zzy.Action" method="remove">
-      <result type="redirect">List.action</result>
+    <action name="remove" class="zzy.Action" method="removeBook">
+      <result type="redirect">list.action</result>
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
-      <result name="success">list.jsp</result>
+      <result name="success">bookList.jsp</result>
       <result name="error">index.jsp</result>
     </action>
   </package>

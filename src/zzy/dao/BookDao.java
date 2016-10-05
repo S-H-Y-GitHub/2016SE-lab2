@@ -59,6 +59,34 @@ public class BookDao
 			return null;
 		}
 	}
+	//基于书名搜索书籍
+	public ArrayList<Book> search(String Title)
+	{
+		String sql = "select * from book where Title='" + "';";
+		ArrayList<Book> books = new ArrayList<Book>();
+		try
+		{
+			ResultSet rs = stmt.executeQuery(sql);
+			while (rs.next())
+			{
+				Book book = new Book();
+				book.setISBN(rs.getString("ISBN"));
+				book.setTitle(rs.getString("Title"));
+				book.setAuthorID(rs.getInt("AuthorID"));
+				book.setPublisher(rs.getString("Publisher"));
+				book.setPublishDate(rs.getDate("PublishDate"));
+				book.setPrice(rs.getFloat("Price"));
+				books.add(book);
+			}
+			return books;
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.search");
+			e.printStackTrace();
+			return books;
+		}
+	}
 	//基于ISBN提取一本书
 	public Book get(String isbn)
 	{
@@ -100,7 +128,7 @@ public class BookDao
 		}
 		catch (Exception e)
 		{
-			System.err.println("MySQL查询错误@zzy.dao.BookDao.remove");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.removeBook");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -109,11 +137,10 @@ public class BookDao
 	public ArrayList<Book> getByAuthor(int authorid)
 	{
 		String sql = "select * from book WHERE AuthorID =" + authorid + ";";
+		ArrayList<Book> books = new ArrayList<Book>();
 		try
 		{
 			ResultSet rs = stmt.executeQuery(sql);
-			ArrayList<Book> books;
-			books = new ArrayList<Book>();
 			while (rs.next())
 			{
 				Book book = new Book();
@@ -131,7 +158,7 @@ public class BookDao
 		{
 			System.err.println("MySQL查询错误@zzy.dao.BookDao.getByAuthor");
 			e.printStackTrace();
-			return null;
+			return books;
 		}
 	}
 	//添加一本书

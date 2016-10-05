@@ -20,6 +20,9 @@
 </head>
 <body>
 <div class="container">
+  <div class="page-header">
+    <h3>书籍列表</h3>
+  </div>
   <table class="table table-bordered table-striped table-hover">
     <thead>
     <tr>
@@ -34,14 +37,14 @@
       <tr>
         <td><s:property value="ISBN"/></td>
         <td>
-          <a href='<s:url action="showDetails"><s:param name="isbn" value="ISBN" /></s:url>'>
+          <a href='<s:url action="showDetails"><s:param name="ISBN" value="ISBN" /></s:url>'>
             <s:property value="title"/>
           </a>
         </td>
         <td>$<s:property value="price"/></td>
         <td>
           <a href='#'>Edit</a>&nbsp;
-          <a href='<s:url action="remove"><s:param name="isbn" value="ISBN" /></s:url>'>Delete</a>
+          <a href='<s:url action="remove"><s:param name="ISBN" value="ISBN" /></s:url>'>Delete</a>
         </td>
       </tr>
     </s:iterator>

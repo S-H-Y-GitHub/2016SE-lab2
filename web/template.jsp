@@ -6,10 +6,12 @@
 <!DOCTYPE html>
 <html lang="zh_CN">
 <head>
+  <!-- made by shuaihuaiyi -->
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>实验二——图书管理系统</title>
+  <title>图书管理系统</title>
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -18,22 +20,22 @@
   <sb:head/>
 </head>
 <body>
-<div class="container container-fluid" style="margin-top: 10px">
-  <div class="row ">
+<div class="container container-fluid" style="margin-top: 50px">
+  <div class="row">
     <div class="col-md-3">
-    
+      <div class="well">
+        <ul class="nav nav-pills nav-stacked">
+          <li style="padding: 10px 10px; font-size: 20px">图书管理</li>
+          <li class="active"><a href="list.action">书籍列表</a></li>
+          <li><a href="addBook.">新增图书</a></li>
+          <li style="padding: 10px 10px; font-size: 20px">作者管理</li>
+          <li><a href="#">作者列表</a></li>
+          <li><a href="#">新增作者</a></li>
+        </ul>
+      </div>
     </div>
     <div class="col-md-9">
-      <a href="List.action"><h1 class="text-center">hello world!!</h1></a>
-      <s:form action="searchAuthor" method="POST" theme="bootstrap" cssClass="well form-group">
-        <s:textfield
-            label="根据作者姓名搜索"
-            name="name"
-            cssClass="form-control form-group"
-            placeholder="输入作者的姓名（区分大小写）"
-            inputPrependIcon="search"/>
-        <s:submit value="搜索" cssClass="form-group btn btn-primary btn-lg btn-block"/>
-      </s:form>
+      
     </div>
   </div>
 </div>
