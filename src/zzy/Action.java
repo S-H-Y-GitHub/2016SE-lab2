@@ -14,13 +14,13 @@ public class Action extends ActionSupport
 	private AuthorDao authordao = new AuthorDao();
 	private String isbn;
 	private String name;
-	
+	//显示所有书籍的概况
 	public String list()
 	{
 		books = bookdao.getAll();
 		return SUCCESS;
 	}
-	
+	//显示一本书的相关信息
 	public String showDetails()
 	{
 		book = bookdao.get(isbn);
@@ -35,13 +35,13 @@ public class Action extends ActionSupport
 		else
 			return ERROR;
 	}
-	
+	//删除一本书
 	public String remove()
 	{
 		bookdao.remove(isbn);
 		return SUCCESS;
 	}
-	
+	//搜索作者姓名
 	public String searchAuthor()
 	{
 		author = authordao.search(name);
@@ -55,6 +55,24 @@ public class Action extends ActionSupport
 		}
 		else
 			return ERROR;
+	}
+	//添加一本新书，需要规定author和book
+	public String addBook()
+	{
+		if((!authordao.hasAuthorID(author.getAuthorID())) )
+		{
+			if((authordao.add(author)) && (bookdao.add(book)))
+				return SUCCESS;
+			else
+				return ERROR;
+		}
+		else
+		{
+			if (bookdao.add(book))
+				return SUCCESS;
+			else
+				return ERROR;
+		}
 	}
 	
 	public Book getBook() {return book;}
@@ -71,4 +89,5 @@ public class Action extends ActionSupport
 	
 	public String getName() {return name;}
 	public void setName(String name) {this.name = name;}
+	
 }

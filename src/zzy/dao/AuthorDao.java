@@ -2,6 +2,7 @@ package zzy.dao;
 
 import zzy.model.*;
 import java.sql.*;
+import java.util.ArrayList;
 
 public class AuthorDao
 {
@@ -19,12 +20,12 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL连接错误");
+			System.err.println("MySQL连接错误@zzy.dao.AuthorDao.AuthorDao");
 			e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			System.err.println("MySQL驱动程序错误");
+			System.err.println("MySQL驱动程序错误@zzy.dao.AuthorDao.AuthorDao");
 			e.printStackTrace();
 		}
 	}
@@ -50,7 +51,7 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.get");
 			e.printStackTrace();
 			return null;
 		}
@@ -76,7 +77,7 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.search");
 			e.printStackTrace();
 			return null;
 		}
@@ -96,7 +97,7 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.add");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -115,7 +116,7 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.update");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -131,9 +132,35 @@ public class AuthorDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.hasAuthorID");
 			e.printStackTrace();
 			return false;
+		}
+	}
+	//返回所有作者的信息
+	public ArrayList<Author> getAll()
+	{
+		String sql = "select * from author;";
+		try
+		{
+			ResultSet rs = stmt.executeQuery(sql);
+			ArrayList<Author> authors = new ArrayList<>();
+			while (rs.next())
+			{
+				Author author = new Author();
+				author.setAuthorID(rs.getInt("AuthorID"));
+				author.setName(rs.getString("Name"));
+				author.setAge(rs.getInt("Age"));
+				author.setCountry(rs.getString("Country"));
+				authors.add(author);
+			}
+			return authors;
+		}
+		catch (SQLException e)
+		{
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.getAll");
+			e.printStackTrace();
+			return null;
 		}
 	}
 }

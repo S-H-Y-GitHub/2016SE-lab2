@@ -20,12 +20,12 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL连接错误");
+			System.err.println("MySQL连接错误@zzy.dao.BookDao.BookDao");
 			e.printStackTrace();
 		}
 		catch (Exception e)
 		{
-			System.err.println("MySQL驱动程序错误");
+			System.err.println("MySQL驱动程序错误@zzy.dao.BookDao.BookDao");
 			e.printStackTrace();
 		}
 	}
@@ -54,7 +54,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.getAll");
 			e.printStackTrace();
 			return null;
 		}
@@ -82,7 +82,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.get");
 			e.printStackTrace();
 			return null;
 		}
@@ -100,6 +100,7 @@ public class BookDao
 		}
 		catch (Exception e)
 		{
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.remove");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -128,7 +129,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.getByAuthor");
 			e.printStackTrace();
 			return null;
 		}
@@ -148,7 +149,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.add");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -168,7 +169,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.update");
 			e.printStackTrace();
 			return Boolean.FALSE;
 		}
@@ -184,7 +185,7 @@ public class BookDao
 		}
 		catch (SQLException e)
 		{
-			System.err.println("MySQL查询错误");
+			System.err.println("MySQL查询错误@zzy.dao.BookDao.hasISBN");
 			e.printStackTrace();
 			return false;
 		}
