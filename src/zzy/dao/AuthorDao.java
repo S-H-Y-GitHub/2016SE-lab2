@@ -141,10 +141,10 @@ public class AuthorDao
 	public ArrayList<Author> getAll()
 	{
 		String sql = "select * from author;";
+		ArrayList<Author> authors = new ArrayList<>();
 		try
 		{
 			ResultSet rs = stmt.executeQuery(sql);
-			ArrayList<Author> authors = new ArrayList<>();
 			while (rs.next())
 			{
 				Author author = new Author();
@@ -160,7 +160,25 @@ public class AuthorDao
 		{
 			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.getAll");
 			e.printStackTrace();
-			return null;
+			return authors;
+		}
+	}
+	//删除一个作者
+	public Boolean remove(int authorID)
+	{
+		String sql = "delete from book where AuthorID='" + authorID + "';";
+		try
+		{
+			if (stmt.executeUpdate(sql) == 1)
+				return Boolean.TRUE;
+			else
+				return Boolean.FALSE;
+		}
+		catch (Exception e)
+		{
+			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.remove");
+			e.printStackTrace();
+			return Boolean.FALSE;
 		}
 	}
 }

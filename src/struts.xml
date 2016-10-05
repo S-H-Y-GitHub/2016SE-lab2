@@ -7,19 +7,37 @@
 <struts>
   <include file="struts-default.xml"/>
   <package name="Book_Management" extends="struts-default">
-    <action name="list" class="zzy.Action" method="list">
+    <action name="listBook" class="zzy.Action" method="listBook">
       <result>bookList.jsp</result>
+    </action>
+    <action name="listAuthor" class="zzy.Action" method="listAuthor">
+      <result name="success">authorList.jsp</result>
     </action>
     <action name="showDetails" class="zzy.Action" method="showDetails">
       <result name="success">details.jsp</result>
       <result name="error">index.jsp</result>
     </action>
-    <action name="remove" class="zzy.Action" method="removeBook">
-      <result type="redirect">list.action</result>
+    <action name="removeBook" class="zzy.Action" method="removeBook">
+      <result type="redirect">listBook.action</result>
+    </action>
+    <action name="removeAuthor" class="zzy.Action" method="removeAuthor">
+      <result type="redirect">listAuthor.action</result>
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
       <result name="success">bookList.jsp</result>
       <result name="error">index.jsp</result>
+    </action>
+    <action name="addBook" class="zzy.Action" method="addBook">
+      <result name="success">addBook.jsp</result>
+    </action>
+    <action name="addAuthor" class="zzy.Action" method="addAuthor">
+      <result name="success">addAuthor.jsp</result>
+    </action>
+    <action name="editBook" class="zzy.Action" method="editBook">
+      <result name="success">editBook.jsp</result>
+    </action>
+    <action name="editAuthor" class="zzy.Action" method="editAuthor">
+      <result name="success">editAuthor.jsp</result>
     </action>
   </package>
 </struts>

@@ -44,7 +44,7 @@
         <td>$<s:property value="price"/></td>
         <td>
           <a href='#'>Edit</a>&nbsp;
-          <a href='<s:url action="remove"><s:param name="ISBN" value="ISBN" /></s:url>'>Delete</a>
+          <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>'>Delete</a>
         </td>
       </tr>
     </s:iterator>

@@ -34,11 +34,10 @@ public class BookDao
 	public ArrayList<Book> getAll()
 	{
 		String sql = "select * from book;";
+		ArrayList<Book> books = new ArrayList<Book>();
 		try
 		{
 			ResultSet rs = stmt.executeQuery(sql);
-			ArrayList<Book> books;
-			books = new ArrayList<Book>();
 			while (rs.next())
 			{
 				Book book = new Book();
@@ -56,7 +55,7 @@ public class BookDao
 		{
 			System.err.println("MySQL查询错误@zzy.dao.BookDao.getAll");
 			e.printStackTrace();
-			return null;
+			return books;
 		}
 	}
 	//基于书名搜索书籍

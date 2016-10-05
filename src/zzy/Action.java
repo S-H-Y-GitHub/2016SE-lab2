@@ -11,6 +11,7 @@ public class Action extends ActionSupport
 	private Book book;
 	private Author author;
 	private ArrayList<Book> books;
+	private ArrayList<Author> authors;
 	private BookDao bookdao = new BookDao();
 	private AuthorDao authordao = new AuthorDao();
 	private String ISBN;
@@ -24,9 +25,15 @@ public class Action extends ActionSupport
 	private String Country;
 	
 	//显示所有书籍的概况
-	public String list()
+	public String listBook()
 	{
 		books = bookdao.getAll();
+		return SUCCESS;
+	}
+	//显示所有作者的概况
+	public String listAuthor()
+	{
+		authors = authordao.getAll();
 		return SUCCESS;
 	}
 	//显示一本书的相关信息
@@ -55,7 +62,7 @@ public class Action extends ActionSupport
 	{
 		if (bookdao.getByAuthor(AuthorID).isEmpty())
 			return ERROR;
-		//else
+		//else //needless
 		authordao.remove(AuthorID);
 		return SUCCESS;
 	}
@@ -100,7 +107,18 @@ public class Action extends ActionSupport
 		else
 			return ERROR;
 	}
-	//
+	//修改书籍信息
+	public String editBook()
+	{
+		return null;
+	}
+	//修改作者信息
+	public String editAuthor()
+	{
+		return null;
+	}
+	
+	
 	public Book getBook() {return book;}
 	public void setBook(Book book) {this.book = book;}
 	
@@ -136,4 +154,7 @@ public class Action extends ActionSupport
 	
 	public String getCountry() {return Country;}
 	public void setCountry(String country) {Country = country;}
+	
+	public ArrayList<Author> getAuthors() {return authors;}
+	public void setAuthors(ArrayList<Author> authors) {this.authors = authors;}
 }
