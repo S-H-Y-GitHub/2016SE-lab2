@@ -183,7 +183,7 @@ public class BookDao
 	//更新书籍信息
 	public Boolean update(Book book)
 	{
-		String sql = "update book set Title='" + book.getTitle() + "',AuthorID=" + book.getAuthorID() + "Publisher='"
+		String sql = "update book set Title='" + book.getTitle() + "',AuthorID=" + book.getAuthorID() + ",Publisher='"
 				+ book.getPublisher() + "',PublishDate='" + book.getPublishDate() + "',Price=" + book.getPrice()
 				+ " where ISBN=" + book.getISBN();
 		try

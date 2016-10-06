@@ -24,7 +24,7 @@
 <div class="container container-fluid">
   <div class="row">
     <div class="col-md-3">
-      <div class="well" style="margin-top: 40px">
+      <div class="well" style="margin-top: 30px">
         <ul class="nav nav-pills nav-stacked">
           <li style="padding: 10px 10px; font-size: 20px">图书管理</li>
           <li><a href="listBook.action">书籍列表</a></li>

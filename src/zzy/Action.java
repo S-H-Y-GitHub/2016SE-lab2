@@ -1,6 +1,5 @@
 package zzy;
 
-import com.sun.xml.internal.bind.v2.TODO;
 import zzy.model.*;
 import zzy.dao.*;
 import java.sql.Date;
@@ -77,7 +76,7 @@ public class Action extends ActionSupport
 		authordao.remove(AuthorID);
 		return SUCCESS;
 	}
-	//搜索作者姓名
+	//搜索作者姓名 // FIXME: 2016/10/6 多个作者同名怎么办？
 	public String searchAuthor()
 	{
 		author = authordao.search(Name);
@@ -92,65 +91,92 @@ public class Action extends ActionSupport
 		else
 			return ERROR;
 	}
-	//添加一本新书，需要规定author和book // FIXME: 2016/10/6 这样写是不行的，加上表单处理。
+	/**
+	* 基于收到的表单添加一本新书，会对表单数据有效性进行检验
+	*/
 	public String addBook()
 	{
-		if((!authordao.hasAuthorID(author.getAuthorID())) )
-		{
-			if((authordao.add(author)) && (bookdao.add(book)))
-				return SUCCESS;
-			else
-				return ERROR;
-		}
-		else
-		{
-			if (bookdao.add(book))
-				return SUCCESS;
-			else
-				return ERROR;
-		}
-	}
-	//添加一个作者
-	public String addAuthor()
-	{
-		if(authordao.add(author))
+		book = formToBook();
+		if(book != null && !bookdao.hasISBN(book.getISBN()) && bookdao.add(book))
 			return SUCCESS;
 		else
 			return ERROR;
 	}
-	//修改书籍信息
+	/**
+	 * 基于收到的表单添加一位作者，会对表单数据有效性进行检验
+	 */
+	public String addAuthor()
+	{
+		author = formToAuthor();
+		if(author!=null && !authordao.hasAuthorID(author.getAuthorID()) && authordao.add(author))
+			return SUCCESS;
+		else
+			return ERROR;
+	}
+	/**
+	 * 基于收到的表单修改书籍信息,会对表单数据有效性进行检验
+	 */
 	public String editBook()
 	{
-		// TODO: 2016/10/6  
-		return null;
+		book = formToBook();
+		if(book != null && bookdao.hasISBN(book.getISBN()) && bookdao.update(book))
+			return SUCCESS;
+		else
+			return ERROR;
 	}
-	//修改作者信息
+	/**
+	 * 基于收到的表单修改作者信息,会对表单数据有效性进行检验
+	 */
 	public String editAuthor()
 	{
-		// TODO: 2016/10/6  
-		return null;
+		author = formToAuthor();
+		if(author!=null && authordao.hasAuthorID(author.getAuthorID()) && authordao.update(author))
+			return SUCCESS;
+		else
+			return ERROR;
 	}
 	
 	/**
-	 * 将收到的表单信息转换为book对象，需准备好表单信息
-	 * @return Book对象
+	 * 将收到的表单信息转换为book对象，需准备好表单信息。注意没有验证ISBN是否已经存在，请在使用时按照需求加入，但是验证了AuthorID的存在
+	 * @return 表单完善时为Book对象，表单非法时为null
 	 */
 	private Book formToBook()
 	{
-		Book book = new Book();
-		// TODO: 2016/10/6  
-		return book;
+		if(AuthorID!=0 && Price!=0 && PublishDate!=null && Publisher!=null && ISBN!=null && Title!=null
+				&& !Publisher.isEmpty() && !ISBN.matches("\\d{13}") && !Title.isEmpty()
+				&& authordao.hasAuthorID(AuthorID))
+		{
+			Book book = new Book();
+			book.setAuthorID(AuthorID);
+			book.setPrice(Price);
+			book.setPublishDate(PublishDate);
+			book.setPublisher(Publisher);
+			book.setISBN(ISBN);
+			book.setTitle(Title);
+			return book;
+		}
+		else
+			return null;
 	}
 	
 	/**
-	 * 将收到的表单信息转换为Author对象，需准备好表单信息
-	 * @return Author对象
+	 * 将收到的表单信息转换为Author对象，需准备好表单信息。注意没有验证AuthorID是否已经存在，请在使用时按照需求加入
+	 * @return 表单完善时为Author对象，表单非法时为null
 	 */
 	private Author formToAuthor()
 	{
-		Author author = new Author();
-		// TODO: 2016/10/6  
-		return author;
+		if(AuthorID!=0 && Age!=0 && Country!=null && Name!=null
+				&& !Country.isEmpty() && !Name.isEmpty())
+		{
+			Author author = new Author();
+			author.setAuthorID(AuthorID);
+			author.setAge(Age);
+			author.setCountry(Country);
+			author.setName(Name);
+			return author;
+		}
+		else
+			return null;
 	}
 	
 	public Book getBook() {return book;}

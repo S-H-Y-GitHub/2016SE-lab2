@@ -20,7 +20,7 @@
   <sb:head/>
 </head>
 <body>
-<div class="container container-fluid" style="margin-top: 50px">
+<div class="container container-fluid" style="margin-top: 30px">
   <div class="row">
     <div class="col-md-3">
       <div class="well">
