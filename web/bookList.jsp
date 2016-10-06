@@ -62,7 +62,7 @@
               </td>
               <td style='vertical-align: middle;'>$<s:property value="price"/></td>
               <td style='vertical-align: middle;'>
-                <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
+                <a href='<s:url action="preEditBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
                 <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
               </td>
             </tr>

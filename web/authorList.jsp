@@ -64,7 +64,7 @@
             <td style='vertical-align: middle;'><s:property value="Age"/></td>
             <td style='vertical-align: middle;'><s:property value="Country"/></td>
             <td style='vertical-align: middle;'>
-              <a href='<s:url action="editAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
+              <a href='<s:url action="preEditAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
               <a href='<s:url action="removeAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
             </td>
           </tr>

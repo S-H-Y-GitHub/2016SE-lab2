@@ -4,6 +4,7 @@ import zzy.model.*;
 import zzy.dao.*;
 
 import java.sql.Date;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 
 import com.opensymphony.xwork2.ActionSupport;
@@ -26,7 +27,7 @@ public class Action extends ActionSupport
 	private String Name;
 	private int Age;
 	private String Country;
-	
+	private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 	//显示所有书籍的概况
 	public String listBook()
 	{
@@ -43,8 +44,10 @@ public class Action extends ActionSupport
 	public String showBookDetails()
 	{
 		book = bookdao.get(ISBN);
+		authors = authordao.getAll();// XXX 权宜之计，浪费时间
 		if (null != book)
 		{
+			dateStr = sdf.format(book.getPublishDate());
 			author = authordao.get(book.getAuthorID());
 			if (null != author)
 				return SUCCESS;

@@ -40,8 +40,14 @@
     <action name="addAuthor" class="zzy.Action" method="addAuthor">
       <result name="success" type="redirect">listAuthor.action</result>
     </action>
+    <action name="preEditBook" class="zzy.Action" method="showBookDetails">
+      <result>editBook.jsp</result>
+    </action>
     <action name="editBook" class="zzy.Action" method="editBook">
       <result name="success" type="redirect">listBook.action</result>
+    </action>
+    <action name="preEditAuthor" class="zzy.Action" method="showAuthorDetails">
+      <result>editAuthor.jsp</result>
     </action>
     <action name="editAuthor" class="zzy.Action" method="editAuthor">
       <result name="success" type="redirect">listAuthor.action</result>

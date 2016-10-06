@@ -98,6 +98,7 @@
                 cssClass="form-control"
                 id="price"
                 name="price"
+                value="%{null}"
                 placeholder="请输入书籍价格，不能为空"/>
           </div>
         </div>
