@@ -2,8 +2,10 @@ package zzy;
 
 import zzy.model.*;
 import zzy.dao.*;
+
 import java.sql.Date;
 import java.util.ArrayList;
+
 import com.opensymphony.xwork2.ActionSupport;
 
 public class Action extends ActionSupport
@@ -19,6 +21,7 @@ public class Action extends ActionSupport
 	private int AuthorID;
 	private String Publisher;
 	private Date PublishDate;
+	private String dateStr;
 	private float Price;
 	private String Name;
 	private int Age;
@@ -53,6 +56,7 @@ public class Action extends ActionSupport
 	}
 	/**
 	 * 显示作者信息，需提供作者的AuthorID
+	 *
 	 * @return 包含作者信息的author对象，包含他的所有作品的数组books
 	 */
 	public String showAuthorDetails()
@@ -80,10 +84,10 @@ public class Action extends ActionSupport
 	public String searchAuthor()
 	{
 		author = authordao.search(Name);
-		if(null != author)
+		if (null != author)
 		{
 			books = bookdao.getByAuthor(author.getAuthorID());
-			if(null != books)
+			if (null != books)
 				return SUCCESS;
 			else
 				return ERROR;
@@ -92,12 +96,12 @@ public class Action extends ActionSupport
 			return ERROR;
 	}
 	/**
-	* 基于收到的表单添加一本新书，会对表单数据有效性进行检验
-	*/
+	 * 基于收到的表单添加一本新书，会对表单数据有效性进行检验
+	 */
 	public String addBook()
 	{
 		book = formToBook();
-		if(book != null && !bookdao.hasISBN(book.getISBN()) && bookdao.add(book))
+		if (book != null && !bookdao.hasISBN(book.getISBN()) && bookdao.add(book))
 			return SUCCESS;
 		else
 			return ERROR;
@@ -108,7 +112,7 @@ public class Action extends ActionSupport
 	public String addAuthor()
 	{
 		author = formToAuthor();
-		if(author!=null && !authordao.hasAuthorID(author.getAuthorID()) && authordao.add(author))
+		if (author != null && !authordao.hasAuthorID(author.getAuthorID()) && authordao.add(author))
 			return SUCCESS;
 		else
 			return ERROR;
@@ -119,7 +123,7 @@ public class Action extends ActionSupport
 	public String editBook()
 	{
 		book = formToBook();
-		if(book != null && bookdao.hasISBN(book.getISBN()) && bookdao.update(book))
+		if (book != null && bookdao.hasISBN(book.getISBN()) && bookdao.update(book))
 			return SUCCESS;
 		else
 			return ERROR;
@@ -130,7 +134,7 @@ public class Action extends ActionSupport
 	public String editAuthor()
 	{
 		author = formToAuthor();
-		if(author!=null && authordao.hasAuthorID(author.getAuthorID()) && authordao.update(author))
+		if (author != null && authordao.hasAuthorID(author.getAuthorID()) && authordao.update(author))
 			return SUCCESS;
 		else
 			return ERROR;
@@ -138,35 +142,48 @@ public class Action extends ActionSupport
 	
 	/**
 	 * 将收到的表单信息转换为book对象，需准备好表单信息。注意没有验证ISBN是否已经存在，请在使用时按照需求加入，但是验证了AuthorID的存在
+	 *
 	 * @return 表单完善时为Book对象，表单非法时为null
 	 */
 	private Book formToBook()
 	{
-		if(AuthorID!=0 && Price!=0 && PublishDate!=null && Publisher!=null && ISBN!=null && Title!=null
-				&& !Publisher.isEmpty() && !ISBN.matches("\\d{13}") && !Title.isEmpty()
-				&& authordao.hasAuthorID(AuthorID))
+		try
 		{
-			Book book = new Book();
-			book.setAuthorID(AuthorID);
-			book.setPrice(Price);
-			book.setPublishDate(PublishDate);
-			book.setPublisher(Publisher);
-			book.setISBN(ISBN);
-			book.setTitle(Title);
-			return book;
+			if (AuthorID != 0 && Price != 0 && dateStr != null && Publisher != null && ISBN != null && Title != null
+					&& Publisher.matches(".{1,45}")
+					&& ISBN.matches("\\d{13}")
+					&& Title.matches(".{1,45}")
+					&& dateStr.matches("\\d{4}-\\d{2}-\\d{2}")
+					&& authordao.hasAuthorID(AuthorID))
+			{
+				Book book = new Book();
+				book.setAuthorID(AuthorID);
+				book.setPrice(Price);
+				book.setPublishDate(java.sql.Date.valueOf(dateStr));
+				book.setPublisher(Publisher);
+				book.setISBN(ISBN);
+				book.setTitle(Title);
+				return book;
+			}
+			else
+				return null;
 		}
-		else
+		catch (Exception e)
+		{
+			e.printStackTrace();
 			return null;
+		}
 	}
 	
 	/**
 	 * 将收到的表单信息转换为Author对象，需准备好表单信息。注意没有验证AuthorID是否已经存在，请在使用时按照需求加入
+	 *
 	 * @return 表单完善时为Author对象，表单非法时为null
 	 */
 	private Author formToAuthor()
 	{
-		if(AuthorID!=0 && Age!=0 && Country!=null && Name!=null
-				&& !Country.isEmpty() && !Name.isEmpty())
+		if (AuthorID != 0 && Age != 0 && Country != null && Name != null
+				&& Country.matches(".{1,45}") && Name.matches(".{1,45}") && Age < 175)
 		{
 			Author author = new Author();
 			author.setAuthorID(AuthorID);
@@ -217,5 +234,7 @@ public class Action extends ActionSupport
 	
 	public ArrayList<Author> getAuthors() {return authors;}
 	public void setAuthors(ArrayList<Author> authors) {this.authors = authors;}
-
+	
+	public String getDateStr() {return dateStr;}
+	public void setDateStr(String dateStr) {this.dateStr = dateStr;}
 }

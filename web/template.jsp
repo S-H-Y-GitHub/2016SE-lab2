@@ -28,7 +28,7 @@
         <ul class="nav nav-pills nav-stacked">
           <li style="padding: 10px 10px; font-size: 20px">图书管理</li>
           <li class="active"><a href="listBook.action">书籍列表</a></li>
-          <li><a href="addBook.jsp">新增图书</a></li>
+          <li><a href="getAuthorsName.action">新增图书</a></li>
           <li style="padding: 10px 10px; font-size: 20px">作者管理</li>
           <li><a href="listAuthor.action">作者列表</a></li>
           <li><a href="search.jsp">搜索作品</a></li>
