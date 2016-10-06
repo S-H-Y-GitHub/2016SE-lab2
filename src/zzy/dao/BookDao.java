@@ -120,7 +120,7 @@ public class BookDao
 		String sql = "delete from book where ISBN='" + ISBN + "';";
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;
@@ -168,7 +168,7 @@ public class BookDao
 				book.getPublisher() + "','" + book.getPublishDate() + "'," + book.getPrice() + ");";
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;
@@ -188,7 +188,7 @@ public class BookDao
 				+ " where ISBN=" + book.getISBN();
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;

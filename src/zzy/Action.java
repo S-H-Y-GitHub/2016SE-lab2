@@ -77,7 +77,7 @@ public class Action extends ActionSupport
 	//删除一个作者
 	public String removeAuthor()
 	{
-		if (bookdao.getByAuthor(AuthorID).isEmpty())
+		if (!bookdao.getByAuthor(AuthorID).isEmpty())
 			return ERROR;
 		//else //needless
 		authordao.remove(AuthorID);

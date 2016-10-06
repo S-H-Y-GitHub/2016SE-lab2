@@ -66,7 +66,7 @@
         </tr>
         <tr>
           <td>出版日期</td>
-          <td><s:property value="dataStr"/></td>
+          <td><s:property value="dateStr"/></td>
         </tr>
         <tr>
           <td>价格</td>

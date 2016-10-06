@@ -90,7 +90,7 @@ public class AuthorDao
 				+ ",'" + author.getCountry() + "');";
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;
@@ -109,7 +109,7 @@ public class AuthorDao
 				+ "',Age=" + author.getAge() + " WHERE AuthorID=" + author.getAuthorID() + ";";
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;
@@ -166,10 +166,10 @@ public class AuthorDao
 	//删除一个作者
 	public Boolean remove(int authorID)
 	{
-		String sql = "delete from book where AuthorID='" + authorID + "';";
+		String sql = "delete from author where AuthorID='" + authorID + "';";
 		try
 		{
-			if (stmt.executeUpdate(sql) == 1)
+			if (stmt.executeUpdate(sql) > 0)
 				return Boolean.TRUE;
 			else
 				return Boolean.FALSE;
