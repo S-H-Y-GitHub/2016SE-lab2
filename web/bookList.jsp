@@ -12,13 +12,48 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="率怀一">
   <title>图书管理系统</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
-  <script src="js/html5shiv.js"></script>
+  <script type="text/javascript" charset="utf8" src="js/html5shiv.js"></script>
   <![endif]-->
   <sj:head jqueryui="false"/>
   <sb:head/>
+  <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+  <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap.js"></script>
+  
+  <!-- initiate datatable -->
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      $('.table').dataTable({
+        language: {
+          "sProcessing": "处理中...",
+          "sLengthMenu": "显示 _MENU_ 项结果",
+          "sZeroRecords": "没有匹配结果",
+          "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+          "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+          "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+          "sInfoPostFix": "",
+          "sSearch": "在表格内搜索:",
+          "sUrl": "",
+          "sEmptyTable": "表中数据为空",
+          "sLoadingRecords": "载入中...",
+          "sInfoThousands": ",",
+          "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+          },
+          "oAria": {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <div class="container container-fluid">
@@ -40,18 +75,24 @@
       <div class="page-header">
         <h3>书籍列表</h3>
       </div>
-      <table class="table table-bordered table-striped table-hover" >
-        <thead>
-        <tr>
-          <th style='vertical-align: middle;'>ISBN</th>
-          <th style='vertical-align: middle;'>书名
-            <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击书名查看详情"></span>
-          </th>
-          <th style='vertical-align: middle;'>价格</th>
-          <th style='vertical-align: middle;'>操作</th>
-        </tr>
-        </thead>
-        <tbody>
+      <s:if test="%{books.isEmpty()}">
+        <h4 class="text-center">数据库中没有书籍╮（╯＿╰）╭</h4>
+      </s:if>
+      <s:else>
+        <table id="example" class="table table-bordered table-striped table-hover">
+          <thead>
+          <tr>
+            <th style='vertical-align: middle;'>ISBN</th>
+            <th style='vertical-align: middle;'>书名
+              <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top"
+                    title="点击书名查看详情"></span>
+            </th>
+            <th style='vertical-align: middle;'>价格</th>
+            <th style='vertical-align: middle;'>出版社</th>
+            <th style='vertical-align: middle;'>操作</th>
+          </tr>
+          </thead>
+          <tbody>
           <s:iterator value="books">
             <tr>
               <td style='vertical-align: middle;'><s:property value="ISBN"/></td>
@@ -61,14 +102,18 @@
                 </a>
               </td>
               <td style='vertical-align: middle;'>$<s:property value="price"/></td>
+              <td style='vertical-align: middle;'><s:property value="publisher"/></td>
               <td style='vertical-align: middle;'>
-                <a href='<s:url action="preEditBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
-                <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
+                <a href='<s:url action="preEditBook"><s:param name="ISBN" value="ISBN" /></s:url>'
+                   class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
+                <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>'
+                   class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
               </td>
             </tr>
-        </s:iterator>
-        </tbody>
-      </table>
+          </s:iterator>
+          </tbody>
+        </table>
+      </s:else>
     </div>
   </div>
 </div>
@@ -78,6 +123,12 @@
   Copyright &copy; 2016 <a href="https://s-h-y-github.github.io/">率怀一</a> ❤ Made with Love <br>
   Theme by <a href="http://getbootstrap.com/">Bootstrap</a> ♪ Powered by <a href="http://struts.apache.org/">Struts</a>
 </footer>
-<script language="JavaScript">$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
+
+<!-- initiate tooltip -->
+<script type="text/javascript" charset="utf-8">
+  $(function () {
+    $("[data-toggle='tooltip']").tooltip();
+  });
+</script>
 </body>
 </html>

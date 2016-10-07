@@ -12,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="author" content="率怀一">
   <title>图书管理系统</title>
-  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
@@ -69,6 +69,10 @@
       <div class="page-header">
         <h3>著作列表</h3>
       </div>
+      <s:if test="%{books.isEmpty()}">
+        <h4 class="text-center">这位作者还没有著作╮（╯＿╰）╭</h4>
+      </s:if>
+      <s:else>
       <table class="table table-bordered table-striped table-hover" >
         <thead>
         <tr>
@@ -77,6 +81,7 @@
             <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击书名查看详情"></span>
           </th>
           <th style='vertical-align: middle;'>价格</th>
+          <th style='vertical-align: middle;'>出版社</th>
           <th style='vertical-align: middle;'>操作</th>
         </tr>
         </thead>
@@ -90,6 +95,7 @@
               </a>
             </td>
             <td style='vertical-align: middle;'>$<s:property value="price"/></td>
+            <td style='vertical-align: middle;'><s:property value="publisher"/></td>
             <td style='vertical-align: middle;'>
               <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
               <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
@@ -98,6 +104,7 @@
         </s:iterator>
         </tbody>
       </table>
+      </s:else>
     </div>
   </div>
 </div>
