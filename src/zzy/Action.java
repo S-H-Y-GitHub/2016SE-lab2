@@ -63,7 +63,6 @@ public class Action extends ActionSupport
 	}
 	/**
 	 * 显示作者信息，需提供作者的AuthorID
-	 *
 	 * @return 包含作者信息的author对象，包含他的所有作品的数组books
 	 */
 	public String showAuthorDetails()
@@ -82,7 +81,10 @@ public class Action extends ActionSupport
 	public String removeAuthor()
 	{
 		if (!bookdao.getByAuthor(AuthorID).isEmpty())
+		{
+			errMsg = "这位作者有著作留存";
 			return ERROR;
+		}
 		//else //needless
 		authordao.remove(AuthorID);
 		return SUCCESS;
@@ -110,7 +112,10 @@ public class Action extends ActionSupport
 		if (book != null && !bookdao.hasISBN(book.getISBN()) && bookdao.add(book))
 			return SUCCESS;
 		else
+		{
+			errMsg = "输入数据不合法";
 			return ERROR;
+		}
 	}
 	/**
 	 * 基于收到的表单添加一位作者，会对表单数据有效性进行检验
@@ -121,7 +126,10 @@ public class Action extends ActionSupport
 		if (author != null && !authordao.hasAuthorID(author.getAuthorID()) && authordao.add(author))
 			return SUCCESS;
 		else
+		{
+			errMsg = "输入数据不合法";
 			return ERROR;
+		}
 	}
 	/**
 	 * 基于收到的表单修改书籍信息,会对表单数据有效性进行检验
@@ -132,7 +140,10 @@ public class Action extends ActionSupport
 		if (book != null && bookdao.hasISBN(book.getISBN()) && bookdao.update(book))
 			return SUCCESS;
 		else
+		{
+			errMsg = "输入数据不合法";
 			return ERROR;
+		}
 	}
 	/**
 	 * 基于收到的表单修改作者信息,会对表单数据有效性进行检验
@@ -143,7 +154,10 @@ public class Action extends ActionSupport
 		if (author != null && authordao.hasAuthorID(author.getAuthorID()) && authordao.update(author))
 			return SUCCESS;
 		else
+		{
+			errMsg = "输入数据不合法";
 			return ERROR;
+		}
 	}
 	
 	/**
