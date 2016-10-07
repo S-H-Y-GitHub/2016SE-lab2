@@ -56,30 +56,35 @@ public class AuthorDao
 			return null;
 		}
 	}
-	//基于作者的姓名进行搜索 todo 同名呢？
-	public Author search(String name)
+	
+	/**
+	 * 基于作者的姓名在数据库中进行搜索
+	 * @param name 作者的姓名
+	 * @return ArrayList(Author)，保存了所有以name为名的作者的信息，若没有以name为名的作者则返回空数组
+	 */
+	public ArrayList<Author> search(String name)
 	{
 		String sql1 = "select * from author where Name = '" + name + "';";
+		ArrayList<Author> authors = new ArrayList<>();
 		try
 		{
 			ResultSet rs = stmt.executeQuery(sql1);
-			if (rs.next())
+			while (rs.next())
 			{
 				Author author = new Author();
 				author.setAuthorID(rs.getInt("AuthorID"));
 				author.setName(name);
 				author.setAge(rs.getInt("Age"));
 				author.setCountry(rs.getString("Country"));
-				return author;
+				authors.add(author);
 			}
-			else
-				return null;
+			return authors;
 		}
 		catch (SQLException e)
 		{
 			System.err.println("MySQL查询错误@zzy.dao.AuthorDao.search");
 			e.printStackTrace();
-			return null;
+			return authors;
 		}
 	}
 	//向数据库中增加作者

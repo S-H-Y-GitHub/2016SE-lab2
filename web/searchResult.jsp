@@ -19,6 +19,41 @@
   <![endif]-->
   <sj:head jqueryui="false"/>
   <sb:head/>
+  <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+  <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap.js"></script>
+  
+  <!-- initiate datatable -->
+  <script type="text/javascript" charset="utf-8">
+    $(document).ready(function () {
+      $('.table').dataTable({
+        language: {
+          "sProcessing": "处理中...",
+          "sLengthMenu": "每页显示 _MENU_ 项结果",
+          "sZeroRecords": "没有匹配结果",
+          "sInfo": "显示第 _START_ 至 _END_ 项结果，共 _TOTAL_ 项",
+          "sInfoEmpty": "显示第 0 至 0 项结果，共 0 项",
+          "sInfoFiltered": "(由 _MAX_ 项结果过滤)",
+          "sInfoPostFix": "",
+          "sSearch": "表格内搜索:",
+          "sUrl": "",
+          "sEmptyTable": "表中数据为空",
+          "sLoadingRecords": "载入中...",
+          "sInfoThousands": ",",
+          "oPaginate": {
+            "sFirst": "首页",
+            "sPrevious": "上页",
+            "sNext": "下页",
+            "sLast": "末页"
+          },
+          "oAria": {
+            "sSortAscending": ": 以升序排列此列",
+            "sSortDescending": ": 以降序排列此列"
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <div class="container container-fluid">
@@ -40,11 +75,62 @@
       <div class="page-header">
         <h3>搜索结果</h3>
       </div>
-      <s:if test=""
+      <s:if test="%{bookOfAuthor.isEmpty()}">
+        <h4 class="text-center">没有找到姓名为<s:property value="name"/>的作者！</h4>
+      </s:if>
+      <s:else>
+        <h4 class="text-center">找到姓名为<s:property value="name"/>的作者共有<s:property value="bookOfAuthor.size"/>位，详情如下：</h4>
+        <s:iterator value="bookOfAuthor" var = "entry">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h4 class="panel-title">AuthorID = <s:property value="key.AuthorID"/></h4>
+            </div>
+            <div class="panel-body">
+              <s:if test="%{#entry.value.isEmpty()}">
+                <h5 class="text-center">这位作者还没有著作╮（╯＿╰）╭</h5>
+              </s:if>
+              <s:else>
+                <table class="table table-bordered table-striped table-hover" >
+                  <thead>
+                  <tr>
+                    <th style='vertical-align: middle;'>ISBN</th>
+                    <th style='vertical-align: middle;'>书名
+                      <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="点击书名查看详情"></span>
+                    </th>
+                    <th style='vertical-align: middle;'>价格</th>
+                    <th style='vertical-align: middle;'>出版社</th>
+                    <th style='vertical-align: middle;'>操作</th>
+                  </tr>
+                  </thead>
+                  <tbody>
+                  <s:iterator value="#entry.value">
+                    <tr>
+                      <td style='vertical-align: middle;'><s:property value="ISBN"/></td>
+                      <td style='vertical-align: middle;'>
+                        <a href='<s:url action="showBookDetails"><s:param name="ISBN" value="ISBN" /></s:url>'>
+                          <s:property value="title"/>
+                        </a>
+                      </td>
+                      <td style='vertical-align: middle;'>$<s:property value="price"/></td>
+                      <td style='vertical-align: middle;'><s:property value="publisher"/></td>
+                      <td style='vertical-align: middle;'>
+                        <a href='<s:url action="editBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm btn-primary">修改</a>&nbsp;
+                        <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>' class="btn btn-sm  btn-danger">删除</a>
+                      </td>
+                    </tr>
+                  </s:iterator>
+                  </tbody>
+                </table>
+              </s:else>
+            </div>
+          </div>
+        </s:iterator>
+      </s:else>
     </div>
   </div>
 </div>
-<footer style="padding-top: 40px;padding-bottom: 40px;margin-top: 100px;color: #777;text-align: center;border-top: 1px solid #e5e5e5;">
+<footer
+    style="padding-top: 40px;padding-bottom: 40px;margin-top: 100px;color: #777;text-align: center;border-top: 1px solid #e5e5e5;">
   Copyright &copy; 2016 <a href="https://s-h-y-github.github.io/">率怀一</a> ❤ Made with Love <br>
   Theme by <a href="http://getbootstrap.com/">Bootstrap</a> ♪ Powered by <a href="http://struts.apache.org/">Struts</a>
 </footer>

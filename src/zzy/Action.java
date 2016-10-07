@@ -6,6 +6,7 @@ import zzy.dao.*;
 import java.sql.Date;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.HashMap;
 
 import com.opensymphony.xwork2.ActionSupport;
 
@@ -15,6 +16,7 @@ public class Action extends ActionSupport
 	private Author author;
 	private ArrayList<Book> books;
 	private ArrayList<Author> authors;
+	private HashMap<Author,ArrayList<Book>> bookOfAuthor = new HashMap<>();
 	private BookDao bookdao = new BookDao();
 	private AuthorDao authordao = new AuthorDao();
 	private String ISBN;
@@ -28,6 +30,7 @@ public class Action extends ActionSupport
 	private int Age;
 	private String Country;
 	private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+	
 	//显示所有书籍的概况
 	public String listBook()
 	{
@@ -83,20 +86,19 @@ public class Action extends ActionSupport
 		authordao.remove(AuthorID);
 		return SUCCESS;
 	}
-	//搜索作者姓名 // FIXME: 2016/10/6 多个作者同名怎么办？
+	/**
+	 * 根据作者姓名搜索作者和所有作品
+	 * @return HashMap，key为Author对象，value为Books数组
+	 */
 	public String searchAuthor()
 	{
-		author = authordao.search(Name);
-		if (null != author)
+		authors = authordao.search(Name);
+		for (Author author:authors)
 		{
 			books = bookdao.getByAuthor(author.getAuthorID());
-			if (null != books)
-				return SUCCESS;
-			else
-				return ERROR;
+			bookOfAuthor.put(author,books);
 		}
-		else
-			return ERROR;
+		return SUCCESS;
 	}
 	/**
 	 * 基于收到的表单添加一本新书，会对表单数据有效性进行检验
@@ -145,7 +147,6 @@ public class Action extends ActionSupport
 	
 	/**
 	 * 将收到的表单信息转换为book对象，需准备好表单信息。注意没有验证ISBN是否已经存在，请在使用时按照需求加入，但是验证了AuthorID的存在
-	 *
 	 * @return 表单完善时为Book对象，表单非法时为null
 	 */
 	private Book formToBook()
@@ -180,7 +181,6 @@ public class Action extends ActionSupport
 	
 	/**
 	 * 将收到的表单信息转换为Author对象，需准备好表单信息。注意没有验证AuthorID是否已经存在，请在使用时按照需求加入
-	 *
 	 * @return 表单完善时为Author对象，表单非法时为null
 	 */
 	private Author formToAuthor()
@@ -240,4 +240,7 @@ public class Action extends ActionSupport
 	
 	public String getDateStr() {return dateStr;}
 	public void setDateStr(String dateStr) {this.dateStr = dateStr;}
+	
+	public HashMap<Author, ArrayList<Book>> getBookOfAuthor() {return bookOfAuthor;}
+	public void setBookOfAuthor(HashMap<Author, ArrayList<Book>> bookOfAuthor) {this.bookOfAuthor = bookOfAuthor;}
 }

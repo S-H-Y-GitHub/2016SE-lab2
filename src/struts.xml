@@ -28,7 +28,6 @@
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
       <result name="success">searchResult.jsp</result>
-      <result name="error">error.jsp</result>
     </action>
     <action name="getAuthorsName" class="zzy.Action" method="listAuthor">
       <result name="success">addBook.jsp</result>
