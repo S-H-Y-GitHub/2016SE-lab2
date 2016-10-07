@@ -27,6 +27,8 @@
   <script type="text/javascript" charset="utf-8">
     $(document).ready(function () {
       $('.table').dataTable({
+        lengthMenu: [ 5, 10, 20, 50, 100 ],
+        pageLength: 5,
         language: {
           "sProcessing": "处理中...",
           "sLengthMenu": "每页显示 _MENU_ 项结果",
