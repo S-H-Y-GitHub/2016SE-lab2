@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="修改功能DAO层">
+    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="ERROR page">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/struts.xml" afterPath="$PROJECT_DIR$/src/struts.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/Action.java" afterPath="$PROJECT_DIR$/src/zzy/Action.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error.jsp" afterPath="$PROJECT_DIR$/web/error.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResult.jsp" afterPath="$PROJECT_DIR$/web/searchResult.jsp" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,11 +38,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Action.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
+            <state relative-caret-position="624">
+              <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#listBook#0;class#Action#0" expanded="false" />
@@ -73,13 +74,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="error.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/error.jsp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="604">
-              <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
               <folding>
-                <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -181,8 +182,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="754">
-              <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
+            <state relative-caret-position="390">
+              <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
               <folding />
             </state>
           </provider>
@@ -244,10 +245,10 @@
         <option value="$PROJECT_DIR$/web/bookList.jsp" />
         <option value="$PROJECT_DIR$/web/authorList.jsp" />
         <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
-        <option value="$PROJECT_DIR$/src/struts.xml" />
-        <option value="$PROJECT_DIR$/src/zzy/Action.java" />
         <option value="$PROJECT_DIR$/web/searchResult.jsp" />
         <option value="E:/zzy/Desktop/wft.html" />
+        <option value="$PROJECT_DIR$/src/struts.xml" />
+        <option value="$PROJECT_DIR$/src/zzy/Action.java" />
         <option value="$PROJECT_DIR$/web/error.jsp" />
       </list>
     </option>
@@ -1025,7 +1026,7 @@
       <workItem from="1475722258331" duration="15695000" />
       <workItem from="1475746485507" duration="17944000" />
       <workItem from="1475807831067" duration="16369000" />
-      <workItem from="1475827678663" duration="4032000" />
+      <workItem from="1475827678663" duration="4640000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1041,11 +1042,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475579778790</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="ERROR page">
+      <created>1475831764929</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1475831764929</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="157717000" />
+    <option name="totallyTimeSpent" value="158325000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1168,6 +1176,8 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
+    <option name="CHECK_NEW_TODO" value="false" />
     <ignored-roots>
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
@@ -1175,8 +1185,8 @@
     <MESSAGE value="add some features" />
     <MESSAGE value="基本功能完成" />
     <MESSAGE value="修改功能DAO层" />
-    <option name="LAST_COMMIT_MESSAGE" value="修改功能DAO层" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
+    <MESSAGE value="ERROR page" />
+    <option name="LAST_COMMIT_MESSAGE" value="ERROR page" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1510,46 +1520,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/struts.xml">
-      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="754">
-          <caret line="29" column="54" selection-start-line="29" selection-start-column="54" selection-end-line="29" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1846">
           <caret line="71" column="12" selection-start-line="71" selection-start-column="12" selection-end-line="71" selection-end-column="12" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="32" column="4" selection-start-line="32" selection-start-column="4" selection-end-line="32" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#listBook#0;class#Action#0" expanded="false" />
-            <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
-            <element signature="docComment;method#showAuthorDetails#0;class#Action#0" expanded="false" />
-            <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
-            <element signature="method#removeBook#0;class#Action#0" expanded="false" />
-            <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#addBook#0;class#Action#0" expanded="false" />
-            <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#editBook#0;class#Action#0" expanded="false" />
-            <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#formToBook#0;class#Action#0" expanded="false" />
-            <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1623,6 +1598,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/struts.xml">
+      <provider editor-type-id="com.intellij.struts2.graph.fileEditor.Struts2GraphFileEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="15" column="45" selection-start-line="15" selection-start-column="45" selection-end-line="15" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
@@ -1634,9 +1620,33 @@
     <entry file="file://$PROJECT_DIR$/web/error.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="604">
-          <caret line="60" column="5" selection-start-line="60" selection-start-column="5" selection-end-line="60" selection-end-column="5" />
+          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
           <folding>
-            <element signature="n#style#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="39" column="5" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#listBook#0;class#Action#0" expanded="false" />
+            <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
+            <element signature="docComment;method#showAuthorDetails#0;class#Action#0" expanded="false" />
+            <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
+            <element signature="method#removeBook#0;class#Action#0" expanded="false" />
+            <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#addBook#0;class#Action#0" expanded="false" />
+            <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#editBook#0;class#Action#0" expanded="false" />
+            <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#formToBook#0;class#Action#0" expanded="false" />
+            <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
           </folding>
         </state>
       </provider>

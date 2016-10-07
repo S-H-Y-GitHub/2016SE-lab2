@@ -30,6 +30,7 @@ public class Action extends ActionSupport
 	private int Age;
 	private String Country;
 	private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
+	private String errMsg="JUST_ERROR_NO_WHY";
 	
 	//显示所有书籍的概况
 	public String listBook()
@@ -243,4 +244,7 @@ public class Action extends ActionSupport
 	
 	public HashMap<Author, ArrayList<Book>> getBookOfAuthor() {return bookOfAuthor;}
 	public void setBookOfAuthor(HashMap<Author, ArrayList<Book>> bookOfAuthor) {this.bookOfAuthor = bookOfAuthor;}
+	
+	public String getErrMsg() {return errMsg;}
+	public void setErrMsg(String errMsg) {this.errMsg = errMsg;}
 }

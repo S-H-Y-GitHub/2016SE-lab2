@@ -1,7 +1,5 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="s" uri="/struts-tags" %>
-<%@ taglib prefix="sj" uri="/struts-jquery-tags" %>
-<%@ taglib prefix="sb" uri="/struts-bootstrap-tags" %>
 
 <!DOCTYPE html>
 <html lang="zh_CN">
@@ -28,7 +26,7 @@
       font-size: 24px;
       font-family: "微软雅黑";
     }
-    .STYLE9 {font-size: 16px; text-align: right}
+    .STYLE9 {font-size: 14px; text-align: right}
     .STYLE12 {
       font-size: 100px;
       font-family: "微软雅黑";
@@ -39,14 +37,6 @@
       left: 20%;
     }
   </style>
-</head>
-<body>
-<div class="center">
-  <span class="STYLE12">&nbsp;:(</span>
-  <div class="STYLE7">&nbsp;&nbsp;&nbsp;&nbsp;你的请求出现问题，需要返回重试。<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;我们只收集某些错误信息，然后为您返回前一页。<br>
-    &nbsp;&nbsp;&nbsp;&nbsp;(完成<span id="mes">0</span>%)</div>
-  <div class="STYLE9">如果你想了解更多信息，则可以稍后在线搜索此错误: 404 页面未找到</div>
   <script type="text/javascript">
     var i = 0;
     var intervalid;
@@ -60,6 +50,14 @@
       i=i+5;
     }
   </script>
+</head>
+<body>
+<div class="center">
+  <span class="STYLE12">&nbsp;:(</span>
+  <div class="STYLE7">&nbsp;&nbsp;&nbsp;&nbsp;你的请求出现问题，需要返回重试。<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;我们只收集某些错误信息，然后为您返回前一页。<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;(完成<span id="mes">0</span>%)</div>
+  <div class="STYLE9"><br>如果你想了解更多信息，则可以稍后在线搜索此错误: <s:property value="errMsg"/></div>
 </div>
 </body>
 </html>

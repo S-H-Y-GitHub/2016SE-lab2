@@ -8,29 +8,36 @@
   <include file="struts-default.xml"/>
   <package name="Book_Management" extends="struts-default">
     <action name="listBook" class="zzy.Action" method="listBook">
-      <result>bookList.jsp</result>
+      <result name="success">bookList.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="listAuthor" class="zzy.Action" method="listAuthor">
       <result name="success">authorList.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="showBookDetails" class="zzy.Action" method="showBookDetails">
       <result name="success">bookDetails.jsp</result>
-      <result name="error">index.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="showAuthorDetails" class="zzy.Action" method="showAuthorDetails">
       <result name="success">authorDetails.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="removeBook" class="zzy.Action" method="removeBook">
-      <result type="redirect">listBook.action</result>
+      <result name="success" type="redirect">listBook.action</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="removeAuthor" class="zzy.Action" method="removeAuthor">
-      <result type="redirect">listAuthor.action</result>
+      <result name="success" type="redirect">listAuthor.action</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="searchAuthor" class="zzy.Action" method="searchAuthor">
       <result name="success">searchResult.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="getAuthorsName" class="zzy.Action" method="listAuthor">
       <result name="success">addBook.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="addBook" class="zzy.Action" method="addBook">
       <result name="success" type="redirect">listBook.action</result>
@@ -38,18 +45,23 @@
     </action>
     <action name="addAuthor" class="zzy.Action" method="addAuthor">
       <result name="success" type="redirect">listAuthor.action</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="preEditBook" class="zzy.Action" method="showBookDetails">
-      <result>editBook.jsp</result>
+      <result name="success">editBook.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="editBook" class="zzy.Action" method="editBook">
       <result name="success" type="redirect">listBook.action</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="preEditAuthor" class="zzy.Action" method="showAuthorDetails">
-      <result>editAuthor.jsp</result>
+      <result name="success">editAuthor.jsp</result>
+      <result name="error">error.jsp</result>
     </action>
     <action name="editAuthor" class="zzy.Action" method="editAuthor">
       <result name="success" type="redirect">listAuthor.action</result>
+      <result name="error">error.jsp</result>
     </action>
   </package>
 </struts>
