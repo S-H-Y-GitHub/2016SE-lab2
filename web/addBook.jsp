@@ -13,12 +13,89 @@
   <meta name="author" content="率怀一">
   <title>图书管理系统</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/formvalidation.min.css"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <![endif]-->
   <sj:head jqueryui="false"/>
   <sb:head/>
+  <!-- include formvalidation 0.8.1, cracked by shuaihuaiyi, use it wisely -->
+  <script type="text/javascript" charset="utf8" src="js/formvalidation.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" charset="utf8">
+    $(document).ready(function () {
+      $('.form-horizontal').formValidation({
+        framework: 'bootstrap',
+        icon: {
+          valid: 'glyphicon glyphicon-ok',
+          invalid: 'glyphicon glyphicon-remove',
+          validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          ISBN: {
+            validators: {
+              notEmpty: {
+                message: 'ISBN不能为空'
+              },
+              integer: {
+                message: 'ISBN必须为纯数字'
+              },
+              stringLength: {
+                min: 13,
+                max: 13,
+                message: 'ISBN必须为13位'
+              }
+            }
+          },
+          title: {
+            validators: {
+              notEmpty: {
+                message: '书名不能为空'
+              },
+              stringLength: {
+                max: 45,
+                message: '书名不能超过45个字符'
+              }
+            }
+          },
+          publisher: {
+            validators: {
+              notEmpty: {
+                message: '出版社不能为空'
+              },
+              stringLength: {
+                max: 45,
+                message: '出版社不能超过45个字符'
+              }
+            }
+          },
+          price: {
+            validators: {
+              notEmpty: {
+                message: '价格不能为空'
+              },
+              regexp: {
+                regexp: /^\d+\.?\d+$/,
+                message: '价格必须为正数'
+              }
+            }
+          },
+          dateStr: {
+            validators: {
+              notEmpty: {
+                message: '出版日期不能为空'
+              },
+              date: {
+                format: 'YYYY-MM-DD',
+                message: '出版日期格式错误'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <div class="container container-fluid">
@@ -129,6 +206,8 @@
   Theme by <a href="http://getbootstrap.com/">Bootstrap</a> ♪ Powered by <a
     href="http://struts.apache.org/">Struts</a>
 </footer>
-<script language="JavaScript">$(function () { $("[data-toggle='tooltip']").tooltip(); });</script>
+<script language="JavaScript">$(function () {
+  $("[data-toggle='tooltip']").tooltip();
+});</script>
 </body>
 </html>

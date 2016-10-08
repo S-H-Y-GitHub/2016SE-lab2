@@ -75,7 +75,7 @@
                 message: '年龄不能为空'
               },
               regexp: {
-                regexp: '/\d+/g',
+                regexp: /^\d+$/,
                 message: '年龄必须是正整数'
               },
               stringLength: {
@@ -87,7 +87,6 @@
         }
       });
     });
-    
   </script>
 </head>
 <body>

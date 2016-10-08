@@ -181,7 +181,8 @@ public class Action extends ActionSupport
 					&& ISBN.matches("\\d{13}")
 					&& Title.matches(".{1,45}")
 					&& dateStr.matches("\\d{4}-\\d{2}-\\d{2}")
-					&& authordao.hasAuthorID(AuthorID))
+					&& authordao.hasAuthorID(AuthorID)
+					&& Price > 0)
 			{
 				Book book = new Book();
 				book.setAuthorID(AuthorID);

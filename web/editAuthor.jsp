@@ -14,12 +14,81 @@
   <meta name="author" content="率怀一">
   <title>图书管理系统</title>
   <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon"/>
+  <link rel="stylesheet" href="css/formvalidation.min.css"/>
   <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
   <!--[if lt IE 9]>
   <script src="js/html5shiv.js"></script>
   <![endif]-->
   <sj:head jqueryui="false"/>
   <sb:head/>
+  <!-- include formvalidation 0.8.1, cracked by shuaihuaiyi, use it wisely -->
+  <script type="text/javascript" charset="utf8" src="js/formvalidation.min.js"></script>
+  <script type="text/javascript" charset="utf8" src="js/bootstrap.min.js"></script>
+  <script type="text/javascript" charset="utf8">
+    $(document).ready(function() {
+      $('.form-horizontal').formValidation({
+        framework: 'bootstrap',
+        icon: {
+          valid: 'glyphicon glyphicon-ok',
+          invalid: 'glyphicon glyphicon-remove',
+          validating: 'glyphicon glyphicon-refresh'
+        },
+        fields: {
+          authorID: {
+            validators: {
+              notEmpty: {
+                message: 'AuthorID不能为空'
+              },
+              integer: {
+                message: 'AuthorID必须为纯数字'
+              },
+              stringLength: {
+                max: 9,
+                message: 'AuthorID不能超过9位'
+              }
+            }
+          },
+          name: {
+            validators: {
+              notEmpty: {
+                message: '姓名不能为空'
+              },
+              stringLength: {
+                max: 45,
+                message: '姓名不能超过45个字符'
+              }
+            }
+          },
+          country: {
+            validators: {
+              notEmpty: {
+                message: '国家不能为空'
+              },
+              stringLength: {
+                max: 45,
+                message: '国家不能超过45个字符'
+              }
+            }
+          },
+          age: {
+            validators: {
+              notEmpty: {
+                message: '年龄不能为空'
+              },
+              regexp: {
+                regexp: /^\d+$/,
+                message: '年龄必须是正整数'
+              },
+              stringLength: {
+                max: 9,
+                message: '这位作者竟然出生在人类出现之前吗？'
+              }
+            }
+          }
+        }
+      });
+    });
+  </script>
 </head>
 <body>
 <div class="container container-fluid">
@@ -53,7 +122,7 @@
                 id="AuthorID"
                 name="authorID"
                 value="%{author.AuthorID}"
-                placeholder="请输入作者的ID，必须为小于11位的数字，不能为空"/>
+                placeholder="请输入作者的ID，必须为小于9位的数字，不能为空"/>
           </div>
         </div>
         <div class="form-group">
@@ -79,7 +148,7 @@
                 id="age"
                 name="age"
                 value="%{author.Age}"
-                placeholder="请输入作者的年龄，必须为小于150的数字，不能为空"/>
+                placeholder="请输入作者的年龄，必须为正整数，不能为空"/>
           </div>
         </div>
         <div class="form-group">
