@@ -1,13 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="作者表单验证初步完成">
+    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="作者表单验证修改，图书验证添加">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/notFound.jsp" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/Action.java" afterPath="$PROJECT_DIR$/src/zzy/Action.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/addAuthor.jsp" afterPath="$PROJECT_DIR$/web/addAuthor.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/addBook.jsp" afterPath="$PROJECT_DIR$/web/addBook.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorDetails.jsp" afterPath="$PROJECT_DIR$/web/authorDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorList.jsp" afterPath="$PROJECT_DIR$/web/authorList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookDetails.jsp" afterPath="$PROJECT_DIR$/web/bookDetails.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookList.jsp" afterPath="$PROJECT_DIR$/web/bookList.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/editAuthor.jsp" afterPath="$PROJECT_DIR$/web/editAuthor.jsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/editBook.jsp" afterPath="$PROJECT_DIR$/web/editBook.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error.html" afterPath="$PROJECT_DIR$/web/error.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error.jsp" afterPath="$PROJECT_DIR$/web/error.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error404.html" afterPath="$PROJECT_DIR$/web/error404.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/error500.html" afterPath="$PROJECT_DIR$/web/error500.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/search.jsp" afterPath="$PROJECT_DIR$/web/search.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResult.jsp" afterPath="$PROJECT_DIR$/web/searchResult.jsp" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -40,35 +50,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="Action.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
+      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/error.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="182" column="60" selection-start-line="182" selection-start-column="40" selection-end-line="182" selection-end-column="60" />
+            <state relative-caret-position="208">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
               <folding>
-                <element signature="method#listBook#0;class#Action#0" expanded="false" />
-                <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
-                <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
-                <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
-                <element signature="method#removeBook#0;class#Action#0" expanded="false" />
-                <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
-                <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
-                <element signature="method#addBook#0;class#Action#0" expanded="false" />
-                <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
-                <element signature="method#editBook#0;class#Action#0" expanded="false" />
-                <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
-                <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addAuthor.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/addAuthor.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="572">
-              <caret line="22" column="78" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="78" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -76,68 +65,101 @@
       <file leaf-file-name="editAuthor.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/editAuthor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="526">
-              <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="addBook.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/addBook.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="97" column="11" selection-start-line="22" selection-start-column="2" selection-end-line="97" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editBook.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/editBook.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2522">
-              <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AuthorDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="292">
-              <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+            <state relative-caret-position="272">
+              <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
               <folding>
-                <element signature="method#AuthorDao#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#get#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#search#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#add#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#update#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#hasAuthorID#0;class#AuthorDao#0" expanded="false" />
-                <element signature="method#getAll#0;class#AuthorDao#0" expanded="false" />
-                <marker date="1475906285812" expanded="true" signature="830:866" ph="select * fro... author" />
-                <marker date="1475906285812" expanded="true" signature="1546:1594" ph="select * fro... author" />
-                <marker date="1475906285812" expanded="true" signature="2253:2311" ph="INSERT INTO author... " />
-                <marker date="1475906285812" expanded="true" signature="2253:2429" ph="INSERT INTO author... " />
-                <marker date="1475906285812" expanded="true" signature="2827:2844" ph="UPDATE autho... " />
-                <marker date="1475906285812" expanded="true" signature="2827:2851" ph="UPDATE autho... " />
-                <marker date="1475906285812" expanded="true" signature="2827:2886" ph="UPDATE autho... " />
-                <marker date="1475906285812" expanded="true" signature="2827:2923" ph="UPDATE autho... " />
-                <marker date="1475906285812" expanded="true" signature="2827:2962" ph="UPDATE autho... " />
-                <marker date="1475906285812" expanded="true" signature="3780:3800" ph="select * fro... author" />
-                <marker date="1475906285812" expanded="true" signature="4472:4524" ph="delete from " />
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="authorDetails.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
+      <file leaf-file-name="error500.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/error500.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="22" column="47" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="47" />
+            <state relative-caret-position="208">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/index.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/search.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="searchResult.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="702">
+              <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+              <folding>
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error404.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/error404.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="208">
+              <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+              <folding>
+                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="editBook.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/editBook.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="error.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/error.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="286">
+              <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookList.jsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="258">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+              <folding>
+                <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -185,33 +207,34 @@
         <option value="$PROJECT_DIR$/web/notFound.jsp" />
         <option value="$PROJECT_DIR$/web/includes/footer.jsp" />
         <option value="$PROJECT_DIR$/web/template.jsp" />
-        <option value="$PROJECT_DIR$/web/search.jsp" />
         <option value="/OGNL Fragment (editBook.jsp:3282).ognl" />
-        <option value="$PROJECT_DIR$/web/bookDetails.jsp" />
         <option value="E:/zzy/Desktop/wft.html" />
         <option value="$PROJECT_DIR$/src/struts.xml" />
-        <option value="$PROJECT_DIR$/web/error.jsp" />
         <option value="$PROJECT_DIR$/web/WEB-INF/error.html" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
-        <option value="$PROJECT_DIR$/web/error.html" />
-        <option value="$PROJECT_DIR$/web/error404.html" />
         <option value="$PROJECT_DIR$/src/zzy/dao/AuthorDao.java" />
         <option value="$PROJECT_DIR$/src/zzy/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/src/zzy/model/Author.java" />
         <option value="$PROJECT_DIR$/src/zzy/model/Book.java" />
-        <option value="$PROJECT_DIR$/web/searchResult.jsp" />
-        <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
-        <option value="$PROJECT_DIR$/web/authorList.jsp" />
-        <option value="$PROJECT_DIR$/web/bookList.jsp" />
         <option value="$PROJECT_DIR$/web/js/formvalidation.js" />
         <option value="$PROJECT_DIR$/web/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/web/css/formvalidation.css" />
         <option value="/JSRegexp Fragment (addAuthor.jsp:1605).regexp" />
         <option value="$PROJECT_DIR$/src/zzy/Action.java" />
         <option value="$PROJECT_DIR$/web/addAuthor.jsp" />
-        <option value="$PROJECT_DIR$/web/editAuthor.jsp" />
         <option value="$PROJECT_DIR$/web/addBook.jsp" />
+        <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
+        <option value="$PROJECT_DIR$/web/authorList.jsp" />
+        <option value="$PROJECT_DIR$/web/bookDetails.jsp" />
+        <option value="$PROJECT_DIR$/web/bookList.jsp" />
+        <option value="$PROJECT_DIR$/web/editAuthor.jsp" />
         <option value="$PROJECT_DIR$/web/editBook.jsp" />
+        <option value="$PROJECT_DIR$/web/error.html" />
+        <option value="$PROJECT_DIR$/web/error.jsp" />
+        <option value="$PROJECT_DIR$/web/error404.html" />
+        <option value="$PROJECT_DIR$/web/error500.html" />
+        <option value="$PROJECT_DIR$/web/search.jsp" />
+        <option value="$PROJECT_DIR$/web/searchResult.jsp" />
       </list>
     </option>
   </component>
@@ -1014,7 +1037,7 @@
       <workItem from="1475746485507" duration="17944000" />
       <workItem from="1475807831067" duration="16369000" />
       <workItem from="1475827678663" duration="6570000" />
-      <workItem from="1475903901877" duration="12802000" />
+      <workItem from="1475903901877" duration="13283000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1086,11 +1109,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475917467578</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="作者表单验证修改，图书验证添加">
+      <created>1475919008471</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1475919008472</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="173057000" />
+    <option name="totallyTimeSpent" value="173538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1229,7 +1259,8 @@
     <MESSAGE value="压缩CSS代码" />
     <MESSAGE value="crack form validation" />
     <MESSAGE value="作者表单验证初步完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="作者表单验证初步完成" />
+    <MESSAGE value="作者表单验证修改，图书验证添加" />
+    <option name="LAST_COMMIT_MESSAGE" value="作者表单验证修改，图书验证添加" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1493,92 +1524,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/error.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1638">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/error404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1222">
-          <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-          <folding>
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/notFound.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/search.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="806">
-          <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/error500.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-          <folding>
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/error.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="364">
-          <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="546">
-          <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/js/formvalidation.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="347">
@@ -1599,22 +1544,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="22" column="47" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="47" />
           <folding />
         </state>
       </provider>
@@ -1646,14 +1575,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/editAuthor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="526">
-          <caret line="79" column="35" selection-start-line="79" selection-start-column="35" selection-end-line="79" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="542">
@@ -1677,25 +1598,151 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/addAuthor.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="572">
-          <caret line="22" column="78" selection-start-line="22" selection-start-column="2" selection-end-line="22" selection-end-column="78" />
-          <folding />
+        <state relative-caret-position="-364">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/addBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="97" column="11" selection-start-line="22" selection-start-column="2" selection-end-line="97" selection-end-column="11" />
+        <state relative-caret-position="338">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="258">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/editAuthor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="14" column="16" selection-start-line="14" selection-start-column="16" selection-end-line="14" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/editBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2522">
-          <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+        <state relative-caret-position="183">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/error.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/error.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="286">
+          <caret line="11" column="16" selection-start-line="11" selection-start-column="16" selection-end-line="11" selection-end-column="16" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/error404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/error500.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="8" column="16" selection-start-line="8" selection-start-column="16" selection-end-line="8" selection-end-column="16" />
+          <folding>
+            <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/notFound.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="22" column="59" selection-start-line="22" selection-start-column="59" selection-end-line="22" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="47" selection-start-line="0" selection-start-column="47" selection-end-line="0" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/search.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="702">
+          <caret line="58" column="7" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
+          <folding>
+            <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
