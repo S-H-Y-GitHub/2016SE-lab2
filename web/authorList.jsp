@@ -100,9 +100,35 @@
             <td style='vertical-align: middle;'><s:property value="Country"/></td>
             <td style='vertical-align: middle;'>
               <a href='<s:url action="preEditAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
-              <a href='<s:url action="removeAuthor"><s:param name="authorID" value="AuthorID" /></s:url>' class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
+              <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal<s:property value="AuthorID"/>">
+                <span class="glyphicon glyphicon-remove"></span>&nbsp;删除
+              </button>
             </td>
           </tr>
+          <div class="modal fade" id="myModal<s:property value="AuthorID"/>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+               aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                    &times;
+                  </button>
+                  <h4 class="modal-title" id="myModalLabel">
+                    确认删除？
+                  </h4>
+                </div>
+                <div class="modal-body">
+                  您真的确定要删除这位作者吗？该操作无法恢复！请先确认这位作者在数据库中没有著作
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                  </button>
+                  <a href='<s:url action="removeAuthor"><s:param name="authorID" value="AuthorID" /></s:url>'
+                     class="btn btn-danger">删除</a>
+                </div>
+              </div>
+            </div>
+          </div>
         </s:iterator>
         </tbody>
       </table>

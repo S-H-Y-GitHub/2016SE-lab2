@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="change titles">
+    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="删除书籍时弹出确认框">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookList.jsp" afterPath="$PROJECT_DIR$/web/bookList.jsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorList.jsp" afterPath="$PROJECT_DIR$/web/authorList.jsp" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -93,18 +93,30 @@
       <file leaf-file-name="authorList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2652">
-              <caret line="102" column="197" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="197" />
+            <state relative-caret-position="300">
+              <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+              <folding>
+                <element signature="e#4738#4745#0#HTML" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="bookDetails.jsp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-442">
+              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="bookList.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="bookList.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="422">
-              <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+            <state relative-caret-position="682">
+              <caret line="138" column="18" selection-start-line="110" selection-start-column="16" selection-end-line="138" selection-end-column="18" />
               <folding>
                 <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
                 <element signature="e#5031#5038#0#HTML" expanded="true" />
@@ -121,16 +133,6 @@
               <folding>
                 <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editBook.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/editBook.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -205,7 +207,6 @@
         <option value="$PROJECT_DIR$/web/addAuthor.jsp" />
         <option value="$PROJECT_DIR$/web/addBook.jsp" />
         <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
-        <option value="$PROJECT_DIR$/web/authorList.jsp" />
         <option value="$PROJECT_DIR$/web/bookDetails.jsp" />
         <option value="$PROJECT_DIR$/web/editAuthor.jsp" />
         <option value="$PROJECT_DIR$/web/editBook.jsp" />
@@ -216,6 +217,7 @@
         <option value="$PROJECT_DIR$/web/searchResult.jsp" />
         <option value="$PROJECT_DIR$/web/search.jsp" />
         <option value="$PROJECT_DIR$/web/bookList.jsp" />
+        <option value="$PROJECT_DIR$/web/authorList.jsp" />
       </list>
     </option>
   </component>
@@ -1019,7 +1021,7 @@
       <workItem from="1475807831067" duration="16369000" />
       <workItem from="1475827678663" duration="6570000" />
       <workItem from="1475903901877" duration="14716000" />
-      <workItem from="1475923606185" duration="917000" />
+      <workItem from="1475923606185" duration="1318000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1105,11 +1107,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475919480532</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="删除书籍时弹出确认框">
+      <created>1475924552784</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1475924552784</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="175888000" />
+    <option name="totallyTimeSpent" value="176289000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1250,7 +1259,8 @@
     <MESSAGE value="作者表单验证初步完成" />
     <MESSAGE value="作者表单验证修改，图书验证添加" />
     <MESSAGE value="change titles" />
-    <option name="LAST_COMMIT_MESSAGE" value="change titles" />
+    <MESSAGE value="删除书籍时弹出确认框" />
+    <option name="LAST_COMMIT_MESSAGE" value="删除书籍时弹出确认框" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1535,13 +1545,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/editAuthor.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -1612,14 +1615,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2652">
-          <caret line="102" column="197" selection-start-line="102" selection-start-column="14" selection-end-line="102" selection-end-column="197" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/search.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="338">
@@ -1630,12 +1625,30 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="116" column="36" selection-start-line="116" selection-start-column="36" selection-end-line="116" selection-end-column="36" />
+        <state relative-caret-position="682">
+          <caret line="138" column="18" selection-start-line="110" selection-start-column="16" selection-end-line="138" selection-end-column="18" />
           <folding>
             <element signature="n#script#2;n#head#0;n#html#0;n#!!top" expanded="false" />
             <element signature="e#5031#5038#0#HTML" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="109" column="38" selection-start-line="109" selection-start-column="38" selection-end-line="109" selection-end-column="38" />
+          <folding>
+            <element signature="e#4738#4745#0#HTML" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-442">
+          <caret line="13" column="16" selection-start-line="13" selection-start-column="16" selection-end-line="13" selection-end-column="16" />
+          <folding />
         </state>
       </provider>
     </entry>
