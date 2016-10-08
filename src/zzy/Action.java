@@ -127,7 +127,7 @@ public class Action extends ActionSupport
 			return SUCCESS;
 		else
 		{
-			errMsg = "输入数据不合法";
+			errMsg = "输入数据不合法，ISBN是否重复？";
 			return ERROR;
 		}
 	}
@@ -139,7 +139,7 @@ public class Action extends ActionSupport
 			return SUCCESS;
 		else
 		{
-			errMsg = "输入数据不合法";
+			errMsg = "输入数据不合法，ID是否重复？";
 			return ERROR;
 		}
 	}
@@ -209,7 +209,7 @@ public class Action extends ActionSupport
 	private Author formToAuthor()
 	{
 		if (AuthorID != 0 && Age != 0 && Country != null && Name != null
-				&& Country.matches(".{1,45}") && Name.matches(".{1,45}") && Age < 175)
+				&& Country.matches(".{1,45}") && Name.matches(".{1,45}") && Age > 0) //其实我是很想检查一下输入的内容的，但是不会做汉字的正则表达式匹配TAT
 		{
 			Author author = new Author();
 			author.setAuthorID(AuthorID);

@@ -1,12 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="压缩CSS代码">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/formvalidation.min.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/formvalidation.js" afterPath="" />
+    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="crack form validation">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/formvalidation.css" afterPath="$PROJECT_DIR$/web/css/formvalidation.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/zzy/Action.java" afterPath="$PROJECT_DIR$/src/zzy/Action.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/addAuthor.jsp" afterPath="$PROJECT_DIR$/web/addAuthor.jsp" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -39,13 +37,25 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="error.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/error.html">
+      <file leaf-file-name="Action.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="494">
+              <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
               <folding>
-                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
+                <element signature="method#listBook#0;class#Action#0" expanded="false" />
+                <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
+                <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
+                <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
+                <element signature="method#removeBook#0;class#Action#0" expanded="false" />
+                <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
+                <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
+                <element signature="method#addBook#0;class#Action#0" expanded="false" />
+                <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
+                <element signature="method#editBook#0;class#Action#0" expanded="false" />
+                <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
+                <element signature="method#formToBook#0;class#Action#0" expanded="false" />
+                <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -54,9 +64,38 @@
       <file leaf-file-name="addAuthor.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/addAuthor.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1300">
-              <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
+            <state relative-caret-position="624">
+              <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AuthorDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="292">
+              <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+              <folding>
+                <element signature="method#AuthorDao#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#get#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#search#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#add#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#update#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#hasAuthorID#0;class#AuthorDao#0" expanded="false" />
+                <element signature="method#getAll#0;class#AuthorDao#0" expanded="false" />
+                <marker date="1475906285812" expanded="true" signature="830:866" ph="select * fro... author" />
+                <marker date="1475906285812" expanded="true" signature="1546:1594" ph="select * fro... author" />
+                <marker date="1475906285812" expanded="true" signature="2253:2311" ph="INSERT INTO author... " />
+                <marker date="1475906285812" expanded="true" signature="2253:2429" ph="INSERT INTO author... " />
+                <marker date="1475906285812" expanded="true" signature="2827:2844" ph="UPDATE autho... " />
+                <marker date="1475906285812" expanded="true" signature="2827:2851" ph="UPDATE autho... " />
+                <marker date="1475906285812" expanded="true" signature="2827:2886" ph="UPDATE autho... " />
+                <marker date="1475906285812" expanded="true" signature="2827:2923" ph="UPDATE autho... " />
+                <marker date="1475906285812" expanded="true" signature="2827:2962" ph="UPDATE autho... " />
+                <marker date="1475906285812" expanded="true" signature="3780:3800" ph="select * fro... author" />
+                <marker date="1475906285812" expanded="true" signature="4472:4524" ph="delete from " />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -64,58 +103,8 @@
       <file leaf-file-name="authorDetails.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="authorList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bookDetails.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bookDetails.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="364">
-              <caret line="23" column="39" selection-start-line="23" selection-start-column="39" selection-end-line="23" selection-end-column="39" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bookList.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/bookList.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="546">
-              <caret line="21" column="72" selection-start-line="21" selection-start-column="72" selection-end-line="21" selection-end-column="72" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="editAuthor.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/editAuthor.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="796">
-              <caret line="41" column="23" selection-start-line="41" selection-start-column="23" selection-end-line="41" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="searchResult.jsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
+            <state relative-caret-position="260">
+              <caret line="22" column="47" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -162,7 +151,6 @@
         <option value="$PROJECT_DIR$/web/list.jsp" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/notFound.jsp" />
-        <option value="$PROJECT_DIR$/web/addAuthor.jsp" />
         <option value="$PROJECT_DIR$/web/includes/footer.jsp" />
         <option value="$PROJECT_DIR$/web/template.jsp" />
         <option value="$PROJECT_DIR$/web/search.jsp" />
@@ -182,7 +170,6 @@
         <option value="$PROJECT_DIR$/src/zzy/dao/BookDao.java" />
         <option value="$PROJECT_DIR$/src/zzy/model/Author.java" />
         <option value="$PROJECT_DIR$/src/zzy/model/Book.java" />
-        <option value="$PROJECT_DIR$/src/zzy/Action.java" />
         <option value="$PROJECT_DIR$/web/searchResult.jsp" />
         <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
         <option value="$PROJECT_DIR$/web/authorList.jsp" />
@@ -190,6 +177,9 @@
         <option value="$PROJECT_DIR$/web/js/formvalidation.js" />
         <option value="$PROJECT_DIR$/web/js/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/web/css/formvalidation.css" />
+        <option value="/JSRegexp Fragment (addAuthor.jsp:1605).regexp" />
+        <option value="$PROJECT_DIR$/web/addAuthor.jsp" />
+        <option value="$PROJECT_DIR$/src/zzy/Action.java" />
       </list>
     </option>
   </component>
@@ -298,42 +288,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="js" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lab2" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="web" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1028,7 +982,7 @@
       <workItem from="1475746485507" duration="17944000" />
       <workItem from="1475807831067" duration="16369000" />
       <workItem from="1475827678663" duration="6570000" />
-      <workItem from="1475903901877" duration="6305000" />
+      <workItem from="1475903901877" duration="11262000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1086,11 +1040,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475911246189</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="crack form validation">
+      <created>1475912207553</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1475912207553</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="166560000" />
+    <option name="totallyTimeSpent" value="171517000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1227,14 +1188,15 @@
     <MESSAGE value="完成javadoc" />
     <MESSAGE value="压缩代码" />
     <MESSAGE value="压缩CSS代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="压缩CSS代码" />
+    <MESSAGE value="crack form validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="crack form validation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="49" />
+      <option name="time" value="51" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1440,28 +1402,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="25" column="25" selection-start-line="25" selection-start-column="25" selection-end-line="25" selection-end-column="25" />
-          <folding>
-            <element signature="method#listBook#0;class#Action#0" expanded="false" />
-            <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
-            <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
-            <element signature="method#removeBook#0;class#Action#0" expanded="false" />
-            <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#addBook#0;class#Action#0" expanded="false" />
-            <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#editBook#0;class#Action#0" expanded="false" />
-            <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
-            <element signature="method#formToBook#0;class#Action#0" expanded="false" />
-            <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/zzy/dao/BookDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="208">
@@ -1510,33 +1450,6 @@
         <state relative-caret-position="130">
           <caret line="5" column="16" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="16" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="6" column="0" selection-start-line="6" selection-start-column="0" selection-end-line="8" selection-end-column="3" />
-          <folding>
-            <element signature="method#AuthorDao#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#get#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#search#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#add#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#update#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#hasAuthorID#0;class#AuthorDao#0" expanded="false" />
-            <element signature="method#getAll#0;class#AuthorDao#0" expanded="false" />
-            <marker date="1475906285812" expanded="true" signature="830:866" ph="select * fro... author" />
-            <marker date="1475906285812" expanded="true" signature="1546:1594" ph="select * fro... author" />
-            <marker date="1475906285812" expanded="true" signature="2253:2311" ph="INSERT INTO author... " />
-            <marker date="1475906285812" expanded="true" signature="2253:2429" ph="INSERT INTO author... " />
-            <marker date="1475906285812" expanded="true" signature="2827:2844" ph="UPDATE autho... " />
-            <marker date="1475906285812" expanded="true" signature="2827:2851" ph="UPDATE autho... " />
-            <marker date="1475906285812" expanded="true" signature="2827:2886" ph="UPDATE autho... " />
-            <marker date="1475906285812" expanded="true" signature="2827:2923" ph="UPDATE autho... " />
-            <marker date="1475906285812" expanded="true" signature="2827:2962" ph="UPDATE autho... " />
-            <marker date="1475906285812" expanded="true" signature="3780:3800" ph="select * fro... author" />
-            <marker date="1475906285812" expanded="true" signature="4472:4524" ph="delete from " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1618,22 +1531,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/addAuthor.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1300">
-          <caret line="50" column="29" selection-start-line="50" selection-start-column="29" selection-end-line="50" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="21" column="76" selection-start-line="21" selection-start-column="76" selection-end-line="21" selection-end-column="76" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/authorList.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="266">
@@ -1695,6 +1592,71 @@
         <state relative-caret-position="312">
           <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/authorDetails.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="260">
+          <caret line="22" column="47" selection-start-line="22" selection-start-column="9" selection-end-line="22" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/addAuthor.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="39" column="16" selection-start-line="39" selection-start-column="16" selection-end-line="39" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zzy/dao/AuthorDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="292">
+          <caret line="191" column="5" selection-start-line="191" selection-start-column="5" selection-end-line="191" selection-end-column="5" />
+          <folding>
+            <element signature="method#AuthorDao#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#get#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#search#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#add#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#update#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#hasAuthorID#0;class#AuthorDao#0" expanded="false" />
+            <element signature="method#getAll#0;class#AuthorDao#0" expanded="false" />
+            <marker date="1475906285812" expanded="true" signature="830:866" ph="select * fro... author" />
+            <marker date="1475906285812" expanded="true" signature="1546:1594" ph="select * fro... author" />
+            <marker date="1475906285812" expanded="true" signature="2253:2311" ph="INSERT INTO author... " />
+            <marker date="1475906285812" expanded="true" signature="2253:2429" ph="INSERT INTO author... " />
+            <marker date="1475906285812" expanded="true" signature="2827:2844" ph="UPDATE autho... " />
+            <marker date="1475906285812" expanded="true" signature="2827:2851" ph="UPDATE autho... " />
+            <marker date="1475906285812" expanded="true" signature="2827:2886" ph="UPDATE autho... " />
+            <marker date="1475906285812" expanded="true" signature="2827:2923" ph="UPDATE autho... " />
+            <marker date="1475906285812" expanded="true" signature="2827:2962" ph="UPDATE autho... " />
+            <marker date="1475906285812" expanded="true" signature="3780:3800" ph="select * fro... author" />
+            <marker date="1475906285812" expanded="true" signature="4472:4524" ph="delete from " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/zzy/Action.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="123" column="4" selection-start-line="123" selection-start-column="4" selection-end-line="123" selection-end-column="4" />
+          <folding>
+            <element signature="method#listBook#0;class#Action#0" expanded="false" />
+            <element signature="method#listAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#showBookDetails#0;class#Action#0" expanded="false" />
+            <element signature="method#showAuthorDetails#0;class#Action#0" expanded="false" />
+            <element signature="method#removeBook#0;class#Action#0" expanded="false" />
+            <element signature="method#removeAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#searchAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#addBook#0;class#Action#0" expanded="false" />
+            <element signature="method#addAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#editBook#0;class#Action#0" expanded="false" />
+            <element signature="method#editAuthor#0;class#Action#0" expanded="false" />
+            <element signature="method#formToBook#0;class#Action#0" expanded="false" />
+            <element signature="method#formToAuthor#0;class#Action#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
