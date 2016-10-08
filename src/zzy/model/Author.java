@@ -1,5 +1,8 @@
 package zzy.model;
 
+/**
+ * 保存一个Author的所有信息
+ */
 public class Author
 {
 	private int AuthorID;

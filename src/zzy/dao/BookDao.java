@@ -4,11 +4,14 @@ import zzy.model.*;
 import java.sql.*;
 import java.util.*;
 
+/**
+ * 处理与Book相关的所有数据库操作
+ */
 public class BookDao
 {
 	private Statement stmt;
 	
-	//构造方法，进行数据库的连接
+	/**构造方法，进行数据库的连接，连接失败时会跳转到error500.html*/
 	public BookDao()
 	{
 		Connection conn;
@@ -30,7 +33,10 @@ public class BookDao
 		}
 	}
 	
-	//获取书籍信息
+	/**
+	 * 获取全部书籍信息
+	 * @return 包含数据库中所有书籍的数组
+	 */
 	public ArrayList<Book> getAll()
 	{
 		String sql = "select * from book;";
@@ -58,7 +64,11 @@ public class BookDao
 			return books;
 		}
 	}
-	//基于书名搜索书籍
+	/**
+	 * 基于书名搜索书籍（本次实验没有使用）
+	 * @param Title 书籍的名字
+	 * @return 找到的书籍数组
+	 */
 	public ArrayList<Book> search(String Title)
 	{
 		String sql = "select * from book where Title='" + "';";
@@ -86,7 +96,11 @@ public class BookDao
 			return books;
 		}
 	}
-	//基于ISBN提取一本书
+	/**
+	 * 基于ISBN提取一本书
+	 * @param isbn 要提取书籍的ISBN
+	 * @return 提取到的书籍，如果没有这本书则返回null
+	 */
 	public Book get(String isbn)
 	{
 		String sql = "select * from book where ISBN='" + isbn + "';";
@@ -114,7 +128,11 @@ public class BookDao
 			return null;
 		}
 	}
-	//删除已经存在的书籍
+	/**
+	 * 删除已经存在的书籍
+	 * @param ISBN 要删除书籍的ISBN
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean remove(String ISBN)
 	{
 		String sql = "delete from book where ISBN='" + ISBN + "';";
@@ -132,7 +150,11 @@ public class BookDao
 			return Boolean.FALSE;
 		}
 	}
-	//获取一个作者的所有书籍
+	/**
+	 * 获取一个作者的所有书籍
+	 * @param authorid 这位作者的ID
+	 * @return 这位作者的所有著作
+	 */
 	public ArrayList<Book> getByAuthor(int authorid)
 	{
 		String sql = "select * from book WHERE AuthorID =" + authorid + ";";
@@ -160,7 +182,11 @@ public class BookDao
 			return books;
 		}
 	}
-	//添加一本书
+	/**
+	 * 添加一本书
+	 * @param book 要加入数据库的书籍对象
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean add(Book book)
 	{
 		String sql = "INSERT INTO book(ISBN, Title, AuthorID, Publisher, PublishDate, Price) VALUES(" +
@@ -180,7 +206,11 @@ public class BookDao
 			return Boolean.FALSE;
 		}
 	}
-	//更新书籍信息
+	/**
+	 * 更新书籍信息
+	 * @param book 要更新的书籍对象，通过isbn确定书籍，然后将数据库中这本书的信息用book对象中的数据代替
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean update(Book book)
 	{
 		String sql = "update book set Title='" + book.getTitle() + "',AuthorID=" + book.getAuthorID() + ",Publisher='"
@@ -200,7 +230,11 @@ public class BookDao
 			return Boolean.FALSE;
 		}
 	}
-	//查找书籍是否存在
+	/**
+	 * 确定数据库中是否有指定ISBN的书籍存在
+	 * @param isbn 指定的ISBN
+	 * @return 存在中为true，不存在则为false
+	 */
 	public Boolean hasISBN(String isbn)
 	{
 		String sql = "select * from book where ISBN='" + isbn + "';";

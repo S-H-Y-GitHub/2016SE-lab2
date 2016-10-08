@@ -4,11 +4,14 @@ import zzy.model.*;
 import java.sql.*;
 import java.util.ArrayList;
 
+/**
+ * 处理与Author相关的所有数据库操作
+ */
 public class AuthorDao
 {
 	private Statement stmt;
 	
-	//构造方法，进行数据库的连接
+	/**构造方法，进行数据库的连接，连接失败时会跳转到error500.html*/
 	public AuthorDao()
 	{
 		Connection conn;
@@ -30,7 +33,11 @@ public class AuthorDao
 		}
 	}
 	
-	//根据作者的ID返回这个作者的所有相关信息
+	/**
+	 * 根据作者的ID返回这个作者的所有相关信息
+	 * @param AuthorID 作者的ID
+	 * @return 作者对象，如果失败则返回null
+	 */
 	public Author get(int AuthorID)
 	{
 		String sql = "select * from author WHERE AuthorID=" + AuthorID + ";";
@@ -87,7 +94,11 @@ public class AuthorDao
 			return authors;
 		}
 	}
-	//向数据库中增加作者
+	/**
+	 * 向数据库中增加作者
+	 * @param author 要添加的Author对象
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean add(Author author)
 	{
 		String sql = "INSERT INTO author (AuthorID, Name, Age, Country) VALUES ("
@@ -107,7 +118,11 @@ public class AuthorDao
 			return Boolean.FALSE;
 		}
 	}
-	//更新作者信息
+	/**
+	 * 更新作者信息
+	 * @param author 要更新的Author对象
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean update(Author author)
 	{
 		String sql = "UPDATE author set Name='" + author.getName() + "',Country='" + author.getCountry()
@@ -126,7 +141,11 @@ public class AuthorDao
 			return Boolean.FALSE;
 		}
 	}
-	//查找作者是否存在
+	/**
+	 * 基于作者的ID查找作者是否存在
+	 * @param AuthorID 作者的ID
+	 * @return 作者存在则为true，不存在则为false
+	 */
 	public Boolean hasAuthorID(int AuthorID)
 	{
 		String sql = "select * from author WHERE AuthorID=" + AuthorID + ";";
@@ -142,7 +161,10 @@ public class AuthorDao
 			return false;
 		}
 	}
-	//返回所有作者的信息
+	/**
+	 * 返回所有作者的信息
+	 * @return 包含数据库中所有作者的数组
+	 */
 	public ArrayList<Author> getAll()
 	{
 		String sql = "select * from author;";
@@ -168,7 +190,11 @@ public class AuthorDao
 			return authors;
 		}
 	}
-	//删除一个作者
+	/**
+	 * 删除一个作者
+	 * @param authorID 要删除的作者的ID
+	 * @return 操作成功则为true，失败则为false
+	 */
 	public Boolean remove(int authorID)
 	{
 		String sql = "delete from author where AuthorID='" + authorID + "';";

@@ -10,6 +10,9 @@ import java.util.HashMap;
 
 import com.opensymphony.xwork2.ActionSupport;
 
+/**
+ * 本次实验中的所有Action
+ */
 public class Action extends ActionSupport
 {
 	private Book book;
@@ -32,19 +35,19 @@ public class Action extends ActionSupport
 	private SimpleDateFormat sdf=new SimpleDateFormat("yyyy-MM-dd");
 	private String errMsg="JUST_ERROR_NO_WHY";
 	
-	//显示所有书籍的概况
+	/**显示所有书籍的概况，结果保存在books数组中*/
 	public String listBook()
 	{
 		books = bookdao.getAll();
 		return SUCCESS;
 	}
-	//显示所有作者的概况
+	/**显示所有作者的概况，结果保存在authors数组中*/
 	public String listAuthor()
 	{
 		authors = authordao.getAll();
 		return SUCCESS;
 	}
-	//显示一本书的相关信息
+	/**显示一本书的所有相关信息。需要规定ISBN来选择特定的一本书。执行完成后书籍信息保存在book对象中，格式化后的出版日期保存在dateStr中，书籍作者的信息保存在author对象中。为了支持修改功能，会将数据库中全部作者存到authors数组中*/
 	public String showBookDetails()
 	{
 		book = bookdao.get(ISBN);
@@ -56,28 +59,41 @@ public class Action extends ActionSupport
 			if (null != author)
 				return SUCCESS;
 			else
+			{
+				errMsg = "数据库中没有AuthorID为"+book.getAuthorID()+"的作者";
 				return ERROR;
+			}
 		}
 		else
+		{
+			errMsg = "数据库中没有ISBN为"+ISBN+"的书籍";
 			return ERROR;
+		}
 	}
-	/**
-	 * 显示作者信息，需提供作者的AuthorID
-	 * @return 包含作者信息的author对象，包含他的所有作品的数组books
-	 */
+	/**显示作者信息，需提供这位作者的AuthorID。执行完成后会得到包含作者信息的author对象和包含他的所有作品的数组books*/
 	public String showAuthorDetails()
 	{
 		author = authordao.get(AuthorID);
-		books = bookdao.getByAuthor(AuthorID);
-		return "success";
+		if(author != null)
+		{
+			books = bookdao.getByAuthor(AuthorID);
+			return SUCCESS;
+		}
+		else
+		{
+			errMsg = "数据库中没有AuthorID为"+AuthorID+"的作者";
+			return ERROR;
+		}
 	}
-	//删除一本书
+	/**删除一本书，需要提供这本书的ISBN*/
 	public String removeBook()
 	{
-		bookdao.remove(ISBN);
-		return SUCCESS;
+		if(bookdao.remove(ISBN))
+			return SUCCESS;
+		else
+			return ERROR;
 	}
-	//删除一个作者
+	/**删除一个作者*/
 	public String removeAuthor()
 	{
 		if (!bookdao.getByAuthor(AuthorID).isEmpty())
@@ -90,8 +106,8 @@ public class Action extends ActionSupport
 		return SUCCESS;
 	}
 	/**
-	 * 根据作者姓名搜索作者和所有作品
-	 * @return HashMap，key为Author对象，value为Books数组
+	 * 根据作者姓名搜索作者和所有作品。需要提供作者的姓名。
+	 * 执行完成后会得到一个HashMap，key为Author对象，value为Books数组。
 	 */
 	public String searchAuthor()
 	{
@@ -103,9 +119,7 @@ public class Action extends ActionSupport
 		}
 		return SUCCESS;
 	}
-	/**
-	 * 基于收到的表单添加一本新书，会对表单数据有效性进行检验
-	 */
+	/**基于收到的表单添加一本新书，会对表单数据有效性进行检验*/
 	public String addBook()
 	{
 		book = formToBook();
@@ -117,9 +131,7 @@ public class Action extends ActionSupport
 			return ERROR;
 		}
 	}
-	/**
-	 * 基于收到的表单添加一位作者，会对表单数据有效性进行检验
-	 */
+	/**基于收到的表单添加一位作者，会对表单数据有效性进行检验*/
 	public String addAuthor()
 	{
 		author = formToAuthor();
@@ -131,9 +143,7 @@ public class Action extends ActionSupport
 			return ERROR;
 		}
 	}
-	/**
-	 * 基于收到的表单修改书籍信息,会对表单数据有效性进行检验
-	 */
+	/**基于收到的表单修改书籍信息,会对表单数据有效性进行检验*/
 	public String editBook()
 	{
 		book = formToBook();
@@ -145,9 +155,7 @@ public class Action extends ActionSupport
 			return ERROR;
 		}
 	}
-	/**
-	 * 基于收到的表单修改作者信息,会对表单数据有效性进行检验
-	 */
+	/**基于收到的表单修改作者信息,会对表单数据有效性进行检验*/
 	public String editAuthor()
 	{
 		author = formToAuthor();

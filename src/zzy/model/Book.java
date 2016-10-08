@@ -2,6 +2,9 @@ package zzy.model;
 
 import java.sql.Date;
 
+/**
+ * 保存一个Book的所有信息
+ */
 public class Book
 {
 	private String ISBN;
