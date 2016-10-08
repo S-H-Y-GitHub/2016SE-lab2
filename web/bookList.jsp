@@ -105,11 +105,38 @@
               <td style='vertical-align: middle;'><s:property value="publisher"/></td>
               <td style='vertical-align: middle;'>
                 <a href='<s:url action="preEditBook"><s:param name="ISBN" value="ISBN" /></s:url>'
-                   class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改</a>&nbsp;
-                <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>'
-                   class="btn btn-sm  btn-danger"><span class="glyphicon glyphicon-remove"></span>&nbsp;删除</a>
+                   class="btn btn-sm btn-primary"><span class="glyphicon glyphicon-edit"></span>&nbsp;修改
+                </a>
+                &nbsp;
+                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#myModal<s:property value="ISBN"/>">
+                  <span class="glyphicon glyphicon-remove"></span>&nbsp;删除
+                </button>
               </td>
             </tr>
+            <div class="modal fade" id="myModal<s:property value="ISBN"/>" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+                 aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                      &times;
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">
+                      确认删除？
+                    </h4>
+                  </div>
+                  <div class="modal-body">
+                    您真的确定要删除这本书吗？该操作无法恢复！
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭
+                    </button>
+                    <a href='<s:url action="removeBook"><s:param name="ISBN" value="ISBN" /></s:url>'
+                       class="btn btn-danger">删除</a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </s:iterator>
           </tbody>
         </table>
