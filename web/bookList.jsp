@@ -19,7 +19,7 @@
   <![endif]-->
   <sj:head jqueryui="false"/>
   <sb:head/>
-  <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="css/dataTables.bootstrap.min.css">
   <script type="text/javascript" charset="utf8" src="js/jquery.dataTables.min.js"></script>
   <script type="text/javascript" charset="utf8" src="js/dataTables.bootstrap.min.js"></script>
   
