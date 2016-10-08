@@ -91,7 +91,11 @@
         </tr>
         <tr>
           <td>姓名</td>
-          <td><s:property value="author.Name"/></td>
+          <td>
+            <a href='<s:url action="showAuthorDetails"><s:param name="authorID" value="author.AuthorID" /></s:url>'>
+              <s:property value="author.Name"/>
+            </a>
+          </td>
         </tr>
         <tr>
           <td>年龄</td>
