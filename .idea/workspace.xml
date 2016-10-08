@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="压缩代码">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/css/formvalidation.css" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/web/css/dataTables.bootstrap.css" afterPath="" />
+    <list default="true" id="1854b181-e22e-478d-ad41-ec99d6738557" name="Default" comment="压缩CSS代码">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/bootstrap.min.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/js/formvalidation.min.js" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/web/js/formvalidation.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorDetails.jsp" afterPath="$PROJECT_DIR$/web/authorDetails.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/authorList.jsp" afterPath="$PROJECT_DIR$/web/authorList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/bookList.jsp" afterPath="$PROJECT_DIR$/web/bookList.jsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/searchResult.jsp" afterPath="$PROJECT_DIR$/web/searchResult.jsp" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/web/css/formvalidation.css" afterPath="$PROJECT_DIR$/web/css/formvalidation.min.css" />
     </list>
     <ignored path="lab2.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -113,33 +111,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="error500.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/error500.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="624">
-              <caret line="24" column="5" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
-              <folding>
-                <element signature="n#script#0;n#head#0;n#html#0;n#!!top" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="search.jsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web/search.jsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="806">
-              <caret line="31" column="49" selection-start-line="31" selection-start-column="49" selection-end-line="31" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="searchResult.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="416">
-              <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+            <state relative-caret-position="312">
+              <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -154,6 +130,7 @@
         <option value="Class" />
         <option value="Jsp File" />
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -210,6 +187,9 @@
         <option value="$PROJECT_DIR$/web/authorDetails.jsp" />
         <option value="$PROJECT_DIR$/web/authorList.jsp" />
         <option value="$PROJECT_DIR$/web/bookList.jsp" />
+        <option value="$PROJECT_DIR$/web/js/formvalidation.js" />
+        <option value="$PROJECT_DIR$/web/js/bootstrap.min.js" />
+        <option value="$PROJECT_DIR$/web/css/formvalidation.css" />
       </list>
     </option>
   </component>
@@ -1048,7 +1028,7 @@
       <workItem from="1475746485507" duration="17944000" />
       <workItem from="1475807831067" duration="16369000" />
       <workItem from="1475827678663" duration="6570000" />
-      <workItem from="1475903901877" duration="5496000" />
+      <workItem from="1475903901877" duration="6305000" />
     </task>
     <task id="LOCAL-00001" summary="add some features">
       <created>1475495872133</created>
@@ -1099,11 +1079,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475910992889</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="压缩CSS代码">
+      <created>1475911246189</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1475911246189</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="165751000" />
+    <option name="totallyTimeSpent" value="166560000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1239,7 +1226,8 @@
     <MESSAGE value="ERROR page finish" />
     <MESSAGE value="完成javadoc" />
     <MESSAGE value="压缩代码" />
-    <option name="LAST_COMMIT_MESSAGE" value="压缩代码" />
+    <MESSAGE value="压缩CSS代码" />
+    <option name="LAST_COMMIT_MESSAGE" value="压缩CSS代码" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1255,20 +1243,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$PROJECT_DIR$/lib/xwork-core.jar!/com/opensymphony/xwork2/conversion/impl/DefaultTypeConverterHolder.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/lib/xwork-core.jar!/com/opensymphony/xwork2/util/logging/jdk/JdkLogger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="188">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="63" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$PROJECT_DIR$/lib/xwork-core.jar!/com/opensymphony/xwork2/inject/ExternalContext.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
@@ -1566,14 +1540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/js/formvalidation.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="0" column="2453" selection-start-line="0" selection-start-column="2453" selection-end-line="0" selection-end-column="2453" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/addBook.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2704">
@@ -1700,10 +1666,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/formvalidation.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="347">
+          <caret line="3" column="11885" selection-start-line="3" selection-start-column="11885" selection-end-line="3" selection-end-column="11885" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/css/formvalidation.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4578" selection-start-line="0" selection-start-column="4578" selection-end-line="0" selection-end-column="4578" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/js/bootstrap.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="18" selection-start-line="0" selection-start-column="18" selection-end-line="0" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/web/searchResult.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="16" column="19" selection-start-line="16" selection-start-column="19" selection-end-line="16" selection-end-column="19" />
+        <state relative-caret-position="312">
+          <caret line="27" column="35" selection-start-line="27" selection-start-column="35" selection-end-line="27" selection-end-column="35" />
           <folding />
         </state>
       </provider>
