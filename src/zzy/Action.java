@@ -47,7 +47,9 @@ public class Action extends ActionSupport
 		authors = authordao.getAll();
 		return SUCCESS;
 	}
-	/**显示一本书的所有相关信息。需要规定ISBN来选择特定的一本书。执行完成后书籍信息保存在book对象中，格式化后的出版日期保存在dateStr中，书籍作者的信息保存在author对象中。为了支持修改功能，会将数据库中全部作者存到authors数组中*/
+	/**显示一本书的所有相关信息。需要规定ISBN来选择特定的一本书。
+	 * 执行完成后书籍信息保存在book对象中，格式化后的出版日期保存在dateStr中，书籍作者的信息保存在author对象中。
+	 * 为了支持修改功能，会将数据库中全部作者存到authors数组中*/
 	public String showBookDetails()
 	{
 		book = bookdao.get(ISBN);

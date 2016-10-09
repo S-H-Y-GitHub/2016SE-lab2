@@ -18,7 +18,7 @@ public class AuthorDao
 		try
 		{
 			Class.forName("com.mysql.jdbc.Driver");
-			conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/bookdb", "root", "zzyadmin");
+			conn = DriverManager.getConnection("jdbc:mysql://wxvjstmagsgz.rds.sae.sina.com.cn:10433/bookdb", "root", "zzyadmin");
 			stmt = conn.createStatement();
 		}
 		catch (SQLException e)

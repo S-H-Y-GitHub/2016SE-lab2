@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<eclipse-userlibraries>
+  <library name="Struts 2-2.3.20.1">
+    <archive path="D:/JavaProjects/lab2/lib/struts2-core.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/commons-fileupload.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/xwork-core.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/ognl.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/commons-lang.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/commons-io.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/asm.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/asm-commons.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/asm-tree.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/javassist.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/freemarker.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/struts2-bootstrap-plugin-2.5.0.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/mysql-connector-java-5.1.39-bin.jar" />
+    <archive path="D:/JavaProjects/lab2/lib/struts2-jquery-plugin-4.0.1-20160922.161421-11.jar" />
+  </library>
+</eclipse-userlibraries>
+
